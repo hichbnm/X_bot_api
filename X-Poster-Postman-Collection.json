@@ -1,0 +1,293 @@
+{
+  "info": {
+    "_postman_id": "f5a7d8c9-e823-4c5f-b9d7-5a36e54f8921",
+    "name": "X-Poster Service",
+    "description": "API collection for testing the X-Poster automated posting service.\n\nDeveloped by: NihedBenAbdennour (website: nihedbenabdennour.me)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "System Status",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{apiToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/status",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "status"
+          ]
+        },
+        "description": "Check if the service is up and running"
+      },
+      "response": []
+    },
+    {
+      "name": "View Logs",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{apiToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/logs?lines=100",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "logs"
+          ],
+          "query": [
+            {
+              "key": "lines",
+              "value": "100"
+            }
+          ]
+        },
+        "description": "View system logs"
+      },
+      "response": []
+    },
+    {
+      "name": "View Screenshots",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{apiToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/screenshots",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "screenshots"
+          ]
+        },
+        "description": "List all error screenshots"
+      },
+      "response": []
+    },
+    {
+      "name": "Post to X",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{apiToken}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"content\": \"Testing the X-Poster API - Automated post from Puppeteer! #automation #testing\",\n    \"media\": []\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/post",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "post"
+          ]
+        },
+        "description": "Post a new tweet to X"
+      },
+      "response": []
+    },
+    {
+      "name": "Post to X with Media",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{apiToken}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"content\": \"Testing the X-Poster API with media attachment - Automated post from Puppeteer! #automation #testing\",\n    \"media\": [\"https://example.com/image.jpg\"]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/post",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "post"
+          ]
+        },
+        "description": "Post a new tweet with media to X"
+      },
+      "response": []
+    },
+    {
+      "name": "Reply to X Post",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{apiToken}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"url\": \"https://twitter.com/username/status/1234567890\",\n    \"content\": \"This is an automated reply to the post above using X-Poster API! #automation #testing\",\n    \"media\": []\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/reply",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "reply"
+          ]
+        },
+        "description": "Reply to an existing X post"
+      },
+      "response": []
+    },
+    {
+      "name": "Reply to X Post with Media",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{apiToken}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"url\": \"https://twitter.com/username/status/1234567890\",\n    \"content\": \"This is an automated reply with media to the post above using X-Poster API! #automation #testing\",\n    \"media\": [\"https://example.com/image.jpg\"]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/reply",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "reply"
+          ]
+        },
+        "description": "Reply to an existing X post with media"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Single Screenshot",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{apiToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/screenshots/{{screenshotFilename}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "screenshots",
+            "{{screenshotFilename}}"
+          ]
+        },
+        "description": "Get a specific error screenshot by filename"
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    },
+    {
+      "key": "apiToken",
+      "value": "your_secure_api_token_here",
+      "type": "string"
+    }
+  ]
+}

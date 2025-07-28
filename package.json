@@ -1,0 +1,33 @@
+{
+  "name": "x-poster-service",
+  "version": "1.0.0",
+  "description": "Automated X posting service using Puppeteer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest"
+  },
+  "author": "NihedBenAbdennour (website: nihedbenabdennour.me)",
+  "license": "MIT",
+  "dependencies": {
+    "destroy": "^1.2.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.2.1",
+    "helmet": "^7.1.0",
+    "https-proxy-agent": "^7.0.6",
+    "morgan": "^1.10.0",
+    "puppeteer": "^21.6.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "send": "^1.2.0",
+    "uuid": "^9.0.1",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2"
+  }
+}

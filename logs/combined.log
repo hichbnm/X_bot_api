@@ -1,0 +1,20 @@
+{"level":"info","message":"X-Poster service started on port 3000","service":"x-poster-service","timestamp":"2025-07-28 16:43:16"}
+{"level":"warn","message":"Authentication failed: Invalid token provided","service":"x-poster-service","timestamp":"2025-07-28 16:44:08"}
+{"level":"info","message":"::1 - - [28/Jul/2025:15:44:08 +0000] \"GET /api/health HTTP/1.1\" 401 39 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:44:08"}
+{"level":"info","message":"::1 - - [28/Jul/2025:15:44:45 +0000] \"GET /api/health HTTP/1.1\" 404 149 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:44:45"}
+{"level":"warn","message":"Authentication failed: Invalid token provided","service":"x-poster-service","timestamp":"2025-07-28 16:50:42"}
+{"level":"info","message":"::1 - - [28/Jul/2025:15:50:42 +0000] \"GET /api/v1/status HTTP/1.1\" 401 39 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:50:42"}
+{"level":"info","message":"::1 - - [28/Jul/2025:15:50:56 +0000] \"GET /api/v1/status HTTP/1.1\" 200 190 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:50:56"}
+{"level":"info","message":"::1 - - [28/Jul/2025:15:51:03 +0000] \"GET /api/v1/logs?lines=100 HTTP/1.1\" 200 1588 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:51:03"}
+{"level":"info","message":"::1 - - [28/Jul/2025:15:51:11 +0000] \"GET /api/v1/screenshots HTTP/1.1\" 200 145 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:51:11"}
+{"level":"info","message":"[8d17b7a0-5e3b-4fc3-894d-bfce1f1eae49] New post request received: Testing the X-Poster API - Aut...","service":"x-poster-service","timestamp":"2025-07-28 16:51:23"}
+{"level":"info","message":"Setting up browser for new post","service":"x-poster-service","timestamp":"2025-07-28 16:51:23"}
+{"level":"info","message":"Attempting to restore session","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
+{"level":"info","message":"No session file found","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
+{"level":"info","message":"No saved session found, logging in from scratch","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
+{"level":"error","message":"Login failed: net::ERR_NO_SUPPORTED_PROXIES at https://twitter.com/login","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
+{"level":"error","message":"Failed to capture screenshot: Protocol error (Page.bringToFront): Not attached to an active page","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
+{"level":"error","message":"Failed to capture screenshot: Protocol error (Page.bringToFront): Not attached to an active page","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
+{"level":"error","message":"[8d17b7a0-5e3b-4fc3-894d-bfce1f1eae49] Post creation failed: Failed to login to X","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
+{"level":"info","message":"::1 - - [28/Jul/2025:15:51:25 +0000] \"POST /api/v1/post HTTP/1.1\" 500 130 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
+{"level":"info","message":"::1 - - [28/Jul/2025:15:51:34 +0000] \"GET /api/v1/logs?lines=100 HTTP/1.1\" 200 3881 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:51:34"}

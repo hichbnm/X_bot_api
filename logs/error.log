@@ -1,0 +1,4 @@
+{"level":"error","message":"Login failed: net::ERR_NO_SUPPORTED_PROXIES at https://twitter.com/login","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
+{"level":"error","message":"Failed to capture screenshot: Protocol error (Page.bringToFront): Not attached to an active page","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
+{"level":"error","message":"Failed to capture screenshot: Protocol error (Page.bringToFront): Not attached to an active page","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
+{"level":"error","message":"[8d17b7a0-5e3b-4fc3-894d-bfce1f1eae49] Post creation failed: Failed to login to X","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
