@@ -1,33 +1,46 @@
 {
-  "name": "x-poster-service",
+  "name": "x-posts-bot",
   "version": "1.0.0",
-  "description": "Automated X posting service using Puppeteer",
+  "description": "Node.js + Puppeteer service for automating X (Twitter) posts and replies",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "jest"
   },
-  "author": "NihedBenAbdennour (website: nihedbenabdennour.me)",
+  "keywords": [
+    "twitter",
+    "x",
+    "automation",
+    "puppeteer",
+    "api"
+  ],
+  "author": "Nihed Ben Abdennour <nihedabdworks@gmail.com> (https://nihedbenabdennour.me)",
   "license": "MIT",
   "dependencies": {
+    "axios": "^1.11.0",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
     "destroy": "^1.2.0",
-    "dotenv": "^16.3.1",
-    "express": "^4.21.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
     "express-rate-limit": "^7.1.5",
-    "express-validator": "^7.2.1",
+    "express-validator": "^7.0.1",
     "helmet": "^7.1.0",
+    "http-proxy-agent": "^7.0.2",
     "https-proxy-agent": "^7.0.6",
-    "morgan": "^1.10.0",
-    "puppeteer": "^21.6.1",
+    "puppeteer": "^22.8.2",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
-    "send": "^1.2.0",
-    "uuid": "^9.0.1",
-    "winston": "^3.17.0"
+    "uuid": "^11.1.0",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^5.0.0"
   },
   "devDependencies": {
     "jest": "^29.7.0",
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }

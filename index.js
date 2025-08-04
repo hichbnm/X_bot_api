@@ -1,70 +1,78 @@
 /**
- * X-Poster Service - Automated X posting service using Puppeteer
- * @author NihedBenAbdennour (website: nihedbenabdennour.me)
+ * X-Posts Bot - Main Server Entry Point
+ * Developed By NihedBenAbdennour (website: nihedbenabdennour.me)
  */
-
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const helmet = require('helmet');
-const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const { authMiddleware } = require('./middleware/auth');
+const authRoutes = require('./routes/authRoutes');
+const postingRoutes = require('./routes/postingRoutes');
+const monitoringRoutes = require('./routes/monitoringRoutes');
 const logger = require('./utils/logger');
-const apiRoutes = require('./routes/api');
 
-// Initialize express app
+// Create Express app
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Security and utility middleware
+// Apply security middleware
 app.use(helmet());
+app.use(cors());
 app.use(express.json());
-app.use(morgan('combined', { stream: { write: message => logger.info(message.trim()) } }));
 
 // Rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // Limit each IP to 100 requests per windowMs
+  max: 100, // limit each IP to 100 requests per window
   standardHeaders: true,
-  message: 'Too many requests from this IP, please try again later.'
+  message: 'Too many requests from this IP, please try again later',
 });
-app.use('/api', limiter);
+app.use(limiter);
 
-// Auth middleware for all API routes
-app.use('/api', authMiddleware);
-
-// API routes
-app.use('/api', apiRoutes);
-
-// Base route
+// Routes
 app.get('/', (req, res) => {
-  res.json({ status: 'ok', message: 'X-Poster service is running' });
+  res.json({ 
+    status: 'online', 
+    service: 'X Posts Bot API',
+    developer: 'Nihed Ben Abdennour',
+    website: 'nihedbenabdennour.me'
+  });
 });
 
-// Error handling middleware
+// Protected routes with auth middleware
+app.use('/api', authMiddleware, authRoutes);        // Authentication endpoints
+app.use('/api', authMiddleware, postingRoutes);     // Posting and reply endpoints
+app.use('/api', authMiddleware, monitoringRoutes);  // System monitoring endpoints
+
+// Error handling
 app.use((err, req, res, next) => {
   logger.error(`Error: ${err.message}`);
   logger.error(err.stack);
-  res.status(err.status || 500).json({
-    error: {
-      message: err.message || 'Internal Server Error',
-      status: err.status || 500
-    }
+  res.status(err.statusCode || 500).json({
+    status: 'error',
+    message: err.message || 'Internal server error'
   });
 });
 
 // Start server
 app.listen(PORT, () => {
-  logger.info(`X-Poster service started on port ${PORT}`);
+  logger.info(`✅ Server running on port ${PORT}`);
+  logger.info(`🔐 API Authentication: Bearer Token`);
+  logger.info(`🔑 Expected API Token: ${process.env.API_TOKEN}`);
+  logger.info(`🤖 X Posts Bot service is ready`);
 });
 
-process.on('uncaughtException', (error) => {
-  logger.error('Uncaught Exception:', error);
-  // Graceful shutdown
+// Handle unhandled promise rejections
+process.on('unhandledRejection', (err) => {
+  logger.error('UNHANDLED REJECTION! 💥 Shutting down...');
+  logger.error(err.name, err.message);
   process.exit(1);
 });
 
-process.on('unhandledRejection', (reason, promise) => {
-  logger.error('Unhandled Rejection at:', promise, 'reason:', reason);
-  // Continue running
+// Handle SIGTERM
+process.on('SIGTERM', () => {
+  logger.info('👋 SIGTERM RECEIVED. Shutting down gracefully');
+  process.exit(0);
 });

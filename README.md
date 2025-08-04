@@ -1,138 +1,170 @@
-# X-Poster Service
+# X-Posts Bot
 
-An automated X (Twitter) posting service using Puppeteer and Node.js.
+A Node.js + Puppeteer-based backend service that automates posting to X (formerly Twitter).
 
-**Developed by:** NihedBenAbdennour (website: nihedbenabdennour.me)
+Developed By [Nihed Ben Abdennour](https://nihedbenabdennour.me)
 
-## 🚀 Features
+## 🔍 Overview
 
-- **Tweet Posting:** Post new content to your X timeline
-- **Reply to Tweets:** Reply to existing posts via URL
-- **Proxy Support:** All browser sessions route through a specified proxy
-- **Session Management:** Automatic login and session persistence
-- **Error Handling:** Captures screenshots on failure for debugging
-- **Docker Ready:** Run as a containerized service
-- **Secure API:** REST API with bearer token authentication
+X-Posts Bot is a robust API service that enables automated posting and replying to X (Twitter) through browser automation. The service handles session management, error recovery, and proxy support while maintaining a clean REST API interface.
 
-## 📋 Technical Stack
+## 🎯 Features
 
-- Node.js and Express.js
-- Puppeteer with Stealth Plugin
-- Winston for logging
-- Docker for containerization
+- **REST API** for X interaction with Bearer token authentication
+- **Post & Reply** capabilities using Puppeteer automation
+- **Session Management** with automatic session recovery
+- **Proxy Support** for all requests
+- **Error Handling** with screenshots and detailed logs
+- **Docker Ready** for easy deployment
+- **Security Features** including rate limiting and token authentication
+- **Logging System** for troubleshooting and monitoring
 
-## 🛠️ Installation
+## 📋 Requirements
 
-### Local Development
+- Node.js 16+ 
+- NPM or Yarn
+- Chrome/Chromium (installed automatically with Puppeteer)
+- Docker (optional for containerized deployment)
 
-1. Clone the repository
+## 🚀 Getting Started
+
+### Local Setup
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/x-posts-bot.git
+cd x-posts-bot
+```
+
 2. Install dependencies:
+
 ```bash
 npm install
 ```
-3. Create a `.env` file based on `.env.example`:
+
+3. Configure the environment:
+
 ```bash
 cp .env.example .env
+# Edit .env file with your configuration
 ```
-4. Configure your environment variables in `.env`
-5. Start the service:
+
+4. Start the service:
+
 ```bash
 npm start
 ```
 
-### Docker Deployment
+### Docker Setup
 
-1. Configure your environment variables in `.env`
-2. Build and start the Docker container:
+1. Build the Docker image:
+
 ```bash
-docker-compose up -d
+docker build -t x-posts-bot .
 ```
 
-## 🔧 Configuration
+2. Run the container:
 
-All configuration is done through environment variables:
+```bash
+docker run -p 3000:3000 --env-file .env x-posts-bot
+```
 
-| Variable | Description |
-|----------|-------------|
-| PORT | Port for the API server (default: 3000) |
-| API_TOKEN | Bearer token for API authentication |
-| X_USERNAME | X (Twitter) account username |
-| X_PASSWORD | X (Twitter) account password |
-| PROXY_HOST | Proxy server host |
-| PROXY_PORT | Proxy server port |
-| PROXY_USERNAME | Proxy authentication username (if required) |
-| PROXY_PASSWORD | Proxy authentication password (if required) |
+## ⚙️ Configuration
 
-## 📡 API Endpoints
+Create a `.env` file with the following configuration options:
+
+```
+PORT=3000
+NODE_ENV=development  # Change to 'production' in production
+API_TOKEN=your_secure_api_token_here
+PROXY_SERVER=http://username:password@host:port  # Optional proxy
+```
+
+## 📚 API Documentation
 
 ### Authentication
 
-All API requests require bearer token authentication:
+All API endpoints are secured with Bearer token authentication:
 
 ```
 Authorization: Bearer your_api_token_here
 ```
 
-### Post New Tweet
+### Endpoints
 
-**Endpoint:** `POST /api/post`
+#### Create a new post
 
-**Request Body:**
+```
+POST /api/post
+```
+
+Request body:
 ```json
 {
-  "content": "Your tweet text here",
-  "mediaUrls": ["https://example.com/image.jpg"] // Optional
+  "content": "Hello world from X-Posts Bot! #automation"
 }
 ```
 
-**Success Response (200):**
+Response:
 ```json
 {
-  "success": true,
-  "message": "Post successfully created",
+  "status": "success",
+  "message": "Post created successfully",
   "data": {
-    "postId": "1234567890",
-    "timestamp": "2023-12-15T12:34:56.789Z"
+    "success": true,
+    "timestamp": "2023-07-30T12:34:56.789Z",
+    "screenshot": "post_success_2023-07-30T12-34-56-789Z.png"
   }
 }
 ```
 
-### Reply to Tweet
+#### Reply to a post
 
-**Endpoint:** `POST /api/reply`
+```
+POST /api/reply
+```
 
-**Request Body:**
+Request body:
 ```json
 {
-  "url": "https://twitter.com/username/status/1234567890",
-  "content": "Your reply text here",
-  "mediaUrls": ["https://example.com/image.jpg"] // Optional
+  "content": "This is my automated reply!",
+  "postUrl": "https://x.com/username/status/1234567890123456789"
 }
 ```
 
-**Success Response (200):**
+Response:
 ```json
 {
-  "success": true,
-  "message": "Reply successfully posted",
+  "status": "success",
+  "message": "Reply posted successfully",
   "data": {
-    "replyId": "9876543210",
-    "originalPostUrl": "https://twitter.com/username/status/1234567890",
-    "timestamp": "2023-12-15T12:34:56.789Z"
+    "success": true,
+    "tweetId": "1234567890123456789",
+    "timestamp": "2023-07-30T12:34:56.789Z",
+    "screenshot": "reply_success_2023-07-30T12-34-56-789Z.png"
   }
 }
 ```
 
-### Health Check
+#### Check session status
 
-**Endpoint:** `GET /api/health`
+```
+GET /api/session/status
+```
 
-**Success Response (200):**
+Response:
 ```json
 {
-  "status": "ok",
-  "timestamp": "2023-12-15T12:34:56.789Z",
-  "uptime": 3600
+  "status": "success",
+  "data": {
+    "isLoggedIn": true,
+    "lastChecked": "2023-07-30T12:34:56.789Z",
+    "username": "YourUsername",
+    "tokenAvailable": true,
+    "proxyEnabled": true,
+    "screenshot": "session_status_2023-07-30T12-34-56-789Z.png"
+  }
 }
 ```
 
@@ -140,42 +172,41 @@ Authorization: Bearer your_api_token_here
 
 ```
 .
-├── index.js                  # Main application file
-├── Dockerfile                # Docker configuration
-├── docker-compose.yml        # Docker Compose configuration
-├── package.json              # Dependencies and scripts
-├── .env.example              # Example environment variables
-├── middleware/
-│   └── auth.js               # Authentication middleware
-├── routes/
-│   └── api.js                # API routes
-├── services/
-│   ├── xService.js           # X posting functionality
-│   └── sessionManager.js     # Session management
-├── utils/
-│   └── logger.js             # Logging functionality
-├── logs/                     # Log files (generated)
-├── screenshots/              # Error screenshots (generated)
-└── data/                     # Persistent data storage
+├── index.js              # Main entry point
+├── middleware/           # Middleware components
+│   └── auth.js           # Authentication middleware
+├── routes/               # API routes
+│   └── xRoutes.js        # X-specific routes
+├── services/             # Business logic
+│   └── xService.js       # X automation service
+├── utils/                # Utility functions
+│   ├── logger.js         # Logging utility
+│   └── xpffGenerator.js  # X-Xp-Forwarded-For generator
+├── data/                 # Data storage (cookies, tokens)
+├── logs/                 # Application logs
+├── screenshots/          # Captured screenshots
+├── Dockerfile            # Docker configuration
+├── .env                  # Environment configuration
+└── README.md             # Project documentation
 ```
 
-## ⚠️ Error Handling
+## 🔒 Security Considerations
 
-- On failure, the service captures screenshots of the browser state
-- All errors are logged with timestamps and stack traces
-- API returns error responses with details of what went wrong
+- The service uses Bearer token authentication for API security
+- Rate limiting prevents abuse
+- Sessions are stored securely
+- Proxy support adds an additional layer of anonymity
 
-## 🔒 Security Notes
+## 📝 Logging and Debugging
 
-- Keep your `.env` file secure and never commit it to version control
-- Regularly rotate your API token
-- Use a secure proxy server to avoid IP blocking
-
-## 📝 Maintenance
-
-The service is designed to be resilient to X platform changes, but may require occasional updates.
-Checking the error screenshots and logs can help diagnose and fix issues as they arise.
+- Logs are stored in the `logs/` directory
+- Screenshots are saved in the `screenshots/` directory for debugging
+- Each error includes a screenshot for easy troubleshooting
 
 ## 📄 License
 
-MIT License
+MIT
+
+---
+
+Created with ❤️ by [Nihed Ben Abdennour](https://nihedbenabdennour.me)

@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "8fae9344-708b-4bf1-8684-17124bdecd2d",
+		"name": "X-Posts Bot API",
+		"description": "Complete API collection for X-Posts Bot - Clean implementation with automated guest_id integration\n\nFeatures:\n- Complete authentication with guest_id extraction\n- Puppeteer-based posting\n- Direct GraphQL API posting\n- System monitoring\n\nDeveloped By Nihed Ben Abdennour (website: nihedbenabdennour.me)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45714057",
+		"_collection_link": "https://hichembenmoussa.postman.co/workspace/Haythem-ben-Moussa~0a6e5253-0949-4532-8de6-c6f9bef21cf7/collection/45714057-8fae9344-708b-4bf1-8684-17124bdecd2d?action=share&source=collection_link&creator=45714057"
+	},
+	"item": [
+		{
+			"name": "🔐 Authentication",
+			"item": [
+				{
+					"name": "Complete Login (Automated + Manual Fallback)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{apiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Complete authentication that extracts auth_token, guest_id, and CT0. Uses X_USERNAME/X_PASSWORD from .env for automated login, falls back to manual browser login if needed. This is the main authentication endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "Manual Login (Browser Only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{apiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/manual",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"manual"
+							]
+						},
+						"description": "Opens browser for manual login only. Extracts auth_token, guest_id, and CT0 after user completes login manually."
+					},
+					"response": []
+				},
+				{
+					"name": "Authentication Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{apiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/status",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"status"
+							]
+						},
+						"description": "Check current authentication status and available tokens (auth_token, guest_id, CT0)."
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh CT0 Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{apiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/ct0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"ct0"
+							]
+						},
+						"description": "Refresh/get new CT0 token using existing auth_token."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "🚀 Direct API Posting",
+			"item": [
+				{
+					"name": "Create Post (Direct GraphQL)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{apiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"content\": \"Testing X-Posts Bot Direct API! ⚡ #automation #graphql\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/direct/post",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"direct",
+								"post"
+							]
+						},
+						"description": "Create a new post using direct GraphQL API calls. Automatically uses stored auth_token and guest_id. Much faster than browser automation."
+					},
+					"response": []
+				},
+				{
+					"name": "Reply to Post (Direct GraphQL)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{apiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"content\": \"Amazing! Direct API reply from X-Posts Bot ⚡ #automation\",\n  \"url\": \"https://x.com/username/status/1234567890123456789\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/direct/reply",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"direct",
+								"reply"
+							]
+						},
+						"description": "Reply to an existing post using direct GraphQL API calls. Automatically uses stored tokens. Much faster than browser automation."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "📊 System Monitoring",
+			"item": [
+				{
+					"name": "System Health Check",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{apiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/status",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"status"
+							]
+						},
+						"description": "Check system health including uptime, memory usage, session status, and proxy configuration."
+					},
+					"response": []
+				},
+				{
+					"name": "System Health Check (v1)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{apiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/status",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"status"
+							]
+						},
+						"description": "Alternative endpoint for system health check (v1 API)."
+					},
+					"response": []
+				},
+				{
+					"name": "Get System Logs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{apiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/logs?level=error&date=2025-08-02",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"logs"
+							],
+							"query": [
+								{
+									"key": "level",
+									"value": "error",
+									"description": "Filter by log level (error, warn, info, debug)"
+								},
+								{
+									"key": "date",
+									"value": "2025-08-02",
+									"description": "Filter by date (YYYY-MM-DD format)"
+								},
+								{
+									"key": "limit",
+									"value": "100",
+									"description": "Limit number of log entries",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Retrieve system logs with optional filtering by date and log level."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Error Screenshots",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{apiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/screenshots?type=error&date=2025-08-02",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"screenshots"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "error",
+									"description": "Filter by screenshot type (error, success)"
+								},
+								{
+									"key": "date",
+									"value": "2025-08-02",
+									"description": "Filter by date (YYYY-MM-DD format)"
+								}
+							]
+						},
+						"description": "List available error screenshots for debugging purposes."
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// Auto-set baseUrl if not defined",
+					"if (!pm.environment.get('baseUrl')) {",
+					"    pm.environment.set('baseUrl', 'http://localhost:3000');",
+					"}",
+					"",
+					"// Auto-set apiToken if not defined (you should change this)",
+					"if (!pm.environment.get('apiToken')) {",
+					"    pm.environment.set('apiToken', 'CrackxTn07');",
+					"    console.log('⚠️ Default API token set. Please update apiToken in environment variables.');",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// Auto-generate request ID for tracking",
+					"if (pm.response.json() && pm.response.json().request_id) {",
+					"    pm.environment.set('lastRequestId', pm.response.json().request_id);",
+					"}",
+					"",
+					"// Basic response validation",
+					"pm.test('Response has correct structure', function () {",
+					"    const jsonData = pm.response.json();",
+					"    pm.expect(jsonData).to.have.property('status');",
+					"    pm.expect(jsonData).to.have.property('message');",
+					"});",
+					"",
+					"// Log response for debugging",
+					"console.log('Response Status:', pm.response.json().status);",
+					"console.log('Response Message:', pm.response.json().message);"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "apiToken",
+			"value": "your_api_token_here",
+			"type": "string"
+		},
+		{
+			"key": "guestId",
+			"value": "v1%3A175395238077243946",
+			"type": "string"
+		}
+	]
+}

@@ -1,28 +1,20 @@
 version: '3.8'
 
 services:
-  x-poster-service:
-    build: .
-    container_name: x-poster-service
+  x-posts-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: x-posts-bot
     restart: unless-stopped
     ports:
       - "3000:3000"
     volumes:
+      - ./data:/app/data
       - ./logs:/app/logs
       - ./screenshots:/app/screenshots
-      - ./data:/app/data
+    env_file:
+      - .env
     environment:
       - NODE_ENV=production
-      - API_TOKEN=${API_TOKEN}
-      - X_USERNAME=${X_USERNAME}
-      - X_PASSWORD=${X_PASSWORD}
-      - PROXY_HOST=${PROXY_HOST}
-      - PROXY_PORT=${PROXY_PORT}
-      - PROXY_USERNAME=${PROXY_USERNAME}
-      - PROXY_PASSWORD=${PROXY_PASSWORD}
-    healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
+      - DEBUG=puppeteer:*

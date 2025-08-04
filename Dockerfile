@@ -1,54 +1,63 @@
-# X-Poster Service Dockerfile
-# @author NihedBenAbdennour (website: nihedbenabdennour.me)
+# X-Posts Bot Dockerfile
+# Developed By NihedBenAbdennour (website: nihedbenabdennour.me)
 
-# Use Node.js slim image as base
-FROM node:18-slim
+# Use Node.js with Chrome pre-installed (latest Puppeteer image)
+FROM ghcr.io/puppeteer/puppeteer:latest
 
 # Set working directory
 WORKDIR /app
+USER root
 
-# Install dependencies for Puppeteer
-RUN apt-get update && apt-get install -y \
-    wget \
-    gnupg \
-    ca-certificates \
-    procps \
-    libxss1 \
-    libxtst6 \
-    libgbm1 \
-    libnss3 \
-    libatk-bridge2.0-0 \
-    libgtk-3-0 \
-    libx11-xcb1 \
-    libxcb-dri3-0 \
-    --no-install-recommends \
-    && rm -rf /var/lib/apt/lists/*
-
-# Install Chrome for Puppeteer
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-    && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' \
-    && apt-get update \
-    && apt-get install -y google-chrome-stable --no-install-recommends \
-    && rm -rf /var/lib/apt/lists/*
-
-# Copy package.json and package-lock.json
+# Copy package files and install dependencies
+# Ensure Puppeteer cache directory exists and install Chrome
 COPY package*.json ./
-
-# Install dependencies
-RUN npm ci --only=production
-
-# Copy app source
+RUN npm ci
+RUN mkdir -p /root/.cache/puppeteer
+RUN npx puppeteer browsers install chrome
+# Copy the rest of the code
 COPY . .
 
-# Create necessary directories
-RUN mkdir -p logs screenshots data
+
+
+# Create directories for data persistence
+RUN mkdir -p /app/data /app/logs /app/screenshots
+
+# Remove problematic Google Chrome repos to avoid GPG error
+RUN rm -f /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/google.list
+
+# Install recommended dependencies for Puppeteer/Chrome
+RUN apt-get update && apt-get install -y \
+    ca-certificates \
+    fonts-liberation \
+    libasound2 \
+    libatk-bridge2.0-0 \
+    libatk1.0-0 \
+    libcups2 \
+    libdbus-1-3 \
+    libdrm2 \
+    libgbm1 \
+    libgtk-3-0 \
+    libnspr4 \
+    libnss3 \
+    libx11-xcb1 \
+    libxcomposite1 \
+    libxdamage1 \
+    libxrandr2 \
+    libxss1 \
+    libxtst6 \
+    lsb-release \
+    wget \
+    xdg-utils \
+    libgconf-2-4 \
+    --no-install-recommends && rm -rf /var/lib/apt/lists/*
+## Run as root for Chrome permissions
 
 # Set environment variables
 ENV NODE_ENV=production
-ENV PORT=3000
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true 
 
-# Expose API port
+# Expose the port
 EXPOSE 3000
 
-# Start the application
+# Set the entry command
 CMD ["node", "index.js"]

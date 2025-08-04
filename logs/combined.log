@@ -1,20 +1,1284 @@
-{"level":"info","message":"X-Poster service started on port 3000","service":"x-poster-service","timestamp":"2025-07-28 16:43:16"}
-{"level":"warn","message":"Authentication failed: Invalid token provided","service":"x-poster-service","timestamp":"2025-07-28 16:44:08"}
-{"level":"info","message":"::1 - - [28/Jul/2025:15:44:08 +0000] \"GET /api/health HTTP/1.1\" 401 39 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:44:08"}
-{"level":"info","message":"::1 - - [28/Jul/2025:15:44:45 +0000] \"GET /api/health HTTP/1.1\" 404 149 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:44:45"}
-{"level":"warn","message":"Authentication failed: Invalid token provided","service":"x-poster-service","timestamp":"2025-07-28 16:50:42"}
-{"level":"info","message":"::1 - - [28/Jul/2025:15:50:42 +0000] \"GET /api/v1/status HTTP/1.1\" 401 39 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:50:42"}
-{"level":"info","message":"::1 - - [28/Jul/2025:15:50:56 +0000] \"GET /api/v1/status HTTP/1.1\" 200 190 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:50:56"}
-{"level":"info","message":"::1 - - [28/Jul/2025:15:51:03 +0000] \"GET /api/v1/logs?lines=100 HTTP/1.1\" 200 1588 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:51:03"}
-{"level":"info","message":"::1 - - [28/Jul/2025:15:51:11 +0000] \"GET /api/v1/screenshots HTTP/1.1\" 200 145 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:51:11"}
-{"level":"info","message":"[8d17b7a0-5e3b-4fc3-894d-bfce1f1eae49] New post request received: Testing the X-Poster API - Aut...","service":"x-poster-service","timestamp":"2025-07-28 16:51:23"}
-{"level":"info","message":"Setting up browser for new post","service":"x-poster-service","timestamp":"2025-07-28 16:51:23"}
-{"level":"info","message":"Attempting to restore session","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
-{"level":"info","message":"No session file found","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
-{"level":"info","message":"No saved session found, logging in from scratch","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
-{"level":"error","message":"Login failed: net::ERR_NO_SUPPORTED_PROXIES at https://twitter.com/login","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
-{"level":"error","message":"Failed to capture screenshot: Protocol error (Page.bringToFront): Not attached to an active page","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
-{"level":"error","message":"Failed to capture screenshot: Protocol error (Page.bringToFront): Not attached to an active page","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
-{"level":"error","message":"[8d17b7a0-5e3b-4fc3-894d-bfce1f1eae49] Post creation failed: Failed to login to X","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
-{"level":"info","message":"::1 - - [28/Jul/2025:15:51:25 +0000] \"POST /api/v1/post HTTP/1.1\" 500 130 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:51:25"}
-{"level":"info","message":"::1 - - [28/Jul/2025:15:51:34 +0000] \"GET /api/v1/logs?lines=100 HTTP/1.1\" 200 3881 \"-\" \"PostmanRuntime/7.44.1\"","service":"x-poster-service","timestamp":"2025-07-28 16:51:34"}
+[2025-07-30 21:28:18] INFO: ✅ Server running on port 3000
+[2025-07-30 21:28:18] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-30 21:28:18] INFO: 🤖 X Posts Bot service is ready
+[2025-07-30 21:30:15] WARN: Authentication failed: Invalid token provided - IP: ::1
+[2025-07-30 21:30:33] INFO: Authentication successful - IP: ::1
+[2025-07-30 21:30:33] INFO: Ensured required directories exist
+[2025-07-30 21:30:34] INFO: Browser initialized successfully
+[2025-07-30 21:30:34] WARN: No stored cookies found
+[2025-07-30 21:30:39] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\session_status_2025-07-30T20-30-39-722Z.png
+[2025-07-30 21:31:15] WARN: Browser disconnected
+[2025-07-30 21:31:28] INFO: Authentication successful - IP: ::1
+[2025-07-30 21:31:28] INFO: Received post request: "Testing the X-Posts Bot API! T..."
+[2025-07-30 21:31:28] INFO: Creating new post on X
+[2025-07-30 21:31:28] INFO: Ensured required directories exist
+[2025-07-30 21:31:28] INFO: No active session, creating new one
+[2025-07-30 21:31:29] INFO: Browser initialized successfully
+[2025-07-30 21:31:29] WARN: No stored cookies found
+[2025-07-30 21:31:33] WARN: Session is invalid, login required
+[2025-07-30 21:31:33] WARN: No stored auth token found
+[2025-07-30 21:31:33] ERROR: Login failed, manual intervention required
+[2025-07-30 21:31:33] ERROR: Session validation failed: Authentication required. Please provide valid credentials.
+[2025-07-30 21:31:33] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\session_error_2025-07-30T20-31-33-393Z.png
+[2025-07-30 21:31:33] ERROR: Error creating post: Session validation failed: Authentication required. Please provide valid credentials.
+[2025-07-30 21:31:33] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\post_error_2025-07-30T20-31-33-528Z.png
+[2025-07-30 21:31:33] ERROR: Error creating post: Failed to create post: Session validation failed: Authentication required. Please provide valid credentials.
+[2025-07-30 21:32:36] WARN: Browser disconnected
+[2025-07-30 21:56:54] INFO: SIGINT received, cleaning up...
+[2025-07-30 21:57:14] INFO: ✅ Server running on port 3000
+[2025-07-30 21:57:14] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-30 21:57:14] INFO: 🤖 X Posts Bot service is ready
+[2025-07-30 21:57:44] WARN: Authentication failed: Invalid token provided - IP: ::1
+[2025-07-30 21:57:55] INFO: Authentication successful - IP: ::1
+[2025-07-30 21:57:55] INFO: Starting auth token retrieval process
+[2025-07-30 21:57:55] INFO: Launching browser for auth token retrieval
+[2025-07-30 21:57:58] INFO: Opening X login page, waiting for manual login
+[2025-07-30 21:58:10] INFO: Waiting for auth_token cookie...
+[2025-07-30 21:58:25] INFO: Auth token retrieved successfully
+[2025-07-30 21:58:26] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\auth_token_retrieval_2025-07-30T20-58-25-896Z.png
+[2025-07-30 21:58:26] ERROR: Error retrieving auth token: The "cb" argument must be of type function. Received undefined
+[2025-07-30 22:03:45] INFO: SIGINT received, cleaning up...
+[2025-07-30 22:03:48] INFO: ✅ Server running on port 3000
+[2025-07-30 22:03:48] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-30 22:03:48] INFO: 🤖 X Posts Bot service is ready
+[2025-07-30 22:03:55] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:03:55] INFO: Starting auth token retrieval process
+[2025-07-30 22:03:55] INFO: Launching browser for auth token retrieval
+[2025-07-30 22:03:56] INFO: Opening X login page, waiting for manual login
+[2025-07-30 22:04:03] INFO: Waiting for auth_token cookie...
+[2025-07-30 22:04:48] INFO: Auth token retrieved successfully
+[2025-07-30 22:04:48] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\auth_token_retrieval_2025-07-30T21-04-48-571Z.png
+[2025-07-30 22:04:49] INFO: Auth token saved successfully to C:\Users\nihed\Desktop\HechTask\data\auth_token.txt
+[2025-07-30 22:05:28] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:05:28] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:05:28] INFO: Starting CT0 cookie retrieval
+[2025-07-30 22:05:28] INFO: Starting CT0 cookie retrieval process
+[2025-07-30 22:05:39] ERROR: Error retrieving CT0 cookie: page.waitForTimeout is not a function
+[2025-07-30 22:05:39] ERROR: CT0 cookie retrieval failed: page.waitForTimeout is not a function
+[2025-07-30 22:05:39] ERROR: Error: page.waitForTimeout is not a function
+[2025-07-30 22:05:39] ERROR: TypeError: page.waitForTimeout is not a function
+    at getCT0Cookie (C:\Users\nihed\Desktop\HechTask\utils\cookieManager.js:71:16)
+    at async C:\Users\nihed\Desktop\HechTask\routes\apiRoutes.js:274:17
+[2025-07-30 22:06:02] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:06:02] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:06:02] INFO: Starting CT0 cookie retrieval
+[2025-07-30 22:06:02] INFO: Starting CT0 cookie retrieval process
+[2025-07-30 22:06:12] ERROR: Error retrieving CT0 cookie: page.waitForTimeout is not a function
+[2025-07-30 22:06:12] ERROR: CT0 cookie retrieval failed: page.waitForTimeout is not a function
+[2025-07-30 22:06:12] ERROR: Error: page.waitForTimeout is not a function
+[2025-07-30 22:06:12] ERROR: TypeError: page.waitForTimeout is not a function
+    at getCT0Cookie (C:\Users\nihed\Desktop\HechTask\utils\cookieManager.js:71:16)
+    at async C:\Users\nihed\Desktop\HechTask\routes\apiRoutes.js:274:17
+[2025-07-30 22:12:22] INFO: SIGINT received, cleaning up...
+[2025-07-30 22:12:26] INFO: ✅ Server running on port 3000
+[2025-07-30 22:12:26] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-30 22:12:26] INFO: 🤖 X Posts Bot service is ready
+[2025-07-30 22:12:30] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:12:30] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:12:30] INFO: Starting CT0 cookie retrieval
+[2025-07-30 22:12:30] INFO: Starting CT0 cookie retrieval process
+[2025-07-30 22:12:30] DEBUG: No stored cookies found
+[2025-07-30 22:12:30] INFO: No stored CT0 cookie found or error reading cookies, will retrieve new one
+[2025-07-30 22:12:45] INFO: CT0 cookie retrieval screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\ct0_cookie_1753909963329.png
+[2025-07-30 22:12:45] INFO: Successfully retrieved CT0 cookie: 5fd3bee504...
+[2025-07-30 22:12:45] INFO: Cookies saved successfully
+[2025-07-30 22:13:07] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:13:07] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:13:07] INFO: Starting bearer token retrieval
+[2025-07-30 22:13:09] ERROR: Failed to extract main.js URL from X homepage
+[2025-07-30 22:13:09] ERROR: Error extracting bearer token: Failed to extract main.js URL from X homepage
+[2025-07-30 22:13:09] ERROR: Bearer token retrieval failed: Failed to extract main.js URL from X homepage
+[2025-07-30 22:13:09] ERROR: Error: Failed to extract main.js URL from X homepage
+[2025-07-30 22:13:09] ERROR: Error: Failed to extract main.js URL from X homepage
+    at getBearerToken (C:\Users\nihed\Desktop\HechTask\utils\tokenExtractor.js:29:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\nihed\Desktop\HechTask\routes\apiRoutes.js:299:25
+[2025-07-30 22:13:25] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:13:25] INFO: Received post request: "Testing the X-Posts Bot Puppet..."
+[2025-07-30 22:13:25] INFO: Creating new post on X
+[2025-07-30 22:13:25] INFO: Ensured required directories exist
+[2025-07-30 22:13:25] INFO: No active session, creating new one
+[2025-07-30 22:13:26] INFO: Browser initialized successfully
+[2025-07-30 22:13:26] INFO: Restored cookies from storage
+[2025-07-30 22:13:37] INFO: Session is valid, user is logged in
+[2025-07-30 22:13:37] INFO: Cookies saved
+[2025-07-30 22:13:37] INFO: Auth token saved
+[2025-07-30 22:14:19] ERROR: Error creating post: Waiting for selector `[data-testid="tweetButton"]` failed: Waiting failed: 30000ms exceeded
+[2025-07-30 22:14:20] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\post_error_2025-07-30T21-14-19-552Z.png
+[2025-07-30 22:14:20] ERROR: Error creating post: Failed to create post: Waiting for selector `[data-testid="tweetButton"]` failed: Waiting failed: 30000ms exceeded
+[2025-07-30 22:14:23] WARN: Browser disconnected
+[2025-07-30 22:14:51] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:14:51] INFO: Ensured required directories exist
+[2025-07-30 22:14:52] INFO: Browser initialized successfully
+[2025-07-30 22:14:52] INFO: Restored cookies from storage
+[2025-07-30 22:15:01] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\session_status_2025-07-30T21-15-00-070Z.png
+[2025-07-30 22:15:12] WARN: Browser disconnected
+[2025-07-30 22:16:20] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:16:20] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:16:20] INFO: Starting direct post request for content: "Testing the X-Posts Bot Direct..."
+[2025-07-30 22:16:21] ERROR: Failed to extract main.js URL from X homepage
+[2025-07-30 22:16:21] ERROR: Error extracting bearer token: Failed to extract main.js URL from X homepage
+[2025-07-30 22:16:21] ERROR: Direct post request failed: Failed to extract main.js URL from X homepage
+[2025-07-30 22:16:21] ERROR: Error: Failed to extract main.js URL from X homepage
+[2025-07-30 22:16:21] ERROR: Error: Failed to extract main.js URL from X homepage
+    at getBearerToken (C:\Users\nihed\Desktop\HechTask\utils\tokenExtractor.js:29:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\nihed\Desktop\HechTask\routes\apiRoutes.js:49:25
+[2025-07-30 22:23:19] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:23:19] INFO: Received post request: "Testing the X-Posts Bot Puppet..."
+[2025-07-30 22:23:19] INFO: Creating new post on X
+[2025-07-30 22:23:19] INFO: Ensured required directories exist
+[2025-07-30 22:23:19] INFO: No active session, creating new one
+[2025-07-30 22:23:20] INFO: Browser initialized successfully
+[2025-07-30 22:23:20] INFO: Restored cookies from storage
+[2025-07-30 22:23:32] INFO: Session is valid, user is logged in
+[2025-07-30 22:23:32] INFO: Cookies saved
+[2025-07-30 22:23:32] INFO: Auth token saved
+[2025-07-30 22:24:15] ERROR: Error creating post: Waiting for selector `[data-testid="tweetButton"]` failed: Waiting failed: 30000ms exceeded
+[2025-07-30 22:24:18] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\post_error_2025-07-30T21-24-15-251Z.png
+[2025-07-30 22:24:18] ERROR: Error creating post: Failed to create post: Waiting for selector `[data-testid="tweetButton"]` failed: Waiting failed: 30000ms exceeded
+[2025-07-30 22:26:40] INFO: SIGINT received, cleaning up...
+[2025-07-30 22:26:44] INFO: ✅ Server running on port 3000
+[2025-07-30 22:26:44] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-30 22:26:44] INFO: 🤖 X Posts Bot service is ready
+[2025-07-30 22:26:49] INFO: Authentication successful - IP: ::1
+[2025-07-30 22:26:49] INFO: Received post request: "Testing the X-Posts Bot Puppet..."
+[2025-07-30 22:26:49] INFO: Creating new post on X
+[2025-07-30 22:26:49] INFO: Ensured required directories exist
+[2025-07-30 22:26:49] INFO: No active session, creating new one
+[2025-07-30 22:26:50] INFO: Browser initialized successfully
+[2025-07-30 22:26:51] INFO: Restored cookies from storage
+[2025-07-30 22:27:03] INFO: Session is valid, user is logged in
+[2025-07-30 22:27:03] INFO: Cookies saved
+[2025-07-30 22:27:03] INFO: Auth token saved
+[2025-07-30 22:27:16] INFO: Using XPath for post button
+[2025-07-30 22:27:16] ERROR: Failed to click post button: page.$x is not a function
+[2025-07-30 22:27:18] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\post_button_not_found_2025-07-30T21-27-16-226Z.png
+[2025-07-30 22:27:18] ERROR: Error creating post: Failed to click post button
+[2025-07-30 22:27:20] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\post_error_2025-07-30T21-27-18-529Z.png
+[2025-07-30 22:27:20] ERROR: Error creating post: Failed to create post: Failed to click post button
+[2025-07-30 22:32:30] INFO: SIGINT received, cleaning up...
+[2025-07-30 23:28:49] INFO: ✅ Server running on port 3000
+[2025-07-30 23:28:49] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-30 23:28:49] INFO: 🤖 X Posts Bot service is ready
+[2025-07-30 23:32:13] INFO: Authentication successful - IP: ::1
+[2025-07-30 23:32:13] INFO: Received post request: "Testing the X-Posts Bot Puppet..."
+[2025-07-30 23:32:13] INFO: Creating new post on X
+[2025-07-30 23:32:13] INFO: Ensured required directories exist
+[2025-07-30 23:32:13] INFO: No active session, creating new one
+[2025-07-30 23:32:13] INFO: Browser initialized successfully
+[2025-07-30 23:32:13] INFO: Restored cookies from storage
+[2025-07-30 23:32:24] INFO: Session is valid, user is logged in
+[2025-07-30 23:32:24] INFO: Cookies saved
+[2025-07-30 23:32:24] INFO: Auth token saved
+[2025-07-30 23:32:36] INFO: Attempting to click post button
+[2025-07-30 23:32:36] INFO: Attempting to click post button with multiple strategies
+[2025-07-30 23:32:37] INFO: Pre-click state screenshot at: C:\Users\nihed\Desktop\HechTask\screenshots\before_post_click_2025-07-30T22-32-36.png
+[2025-07-30 23:32:38] ERROR: Error trying to click post button: page.waitForTimeout is not a function. See: C:\Users\nihed\Desktop\HechTask\screenshots\post_click_error_2025-07-30T22-32-37.png
+[2025-07-30 23:32:38] ERROR: Failed to click post button after multiple attempts
+[2025-07-30 23:32:38] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\post_button_not_found_2025-07-30T22-32-38-051Z.png
+[2025-07-30 23:32:38] ERROR: Error creating post: Failed to click post button
+[2025-07-30 23:32:39] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\post_error_2025-07-30T22-32-38-943Z.png
+[2025-07-30 23:32:39] ERROR: Error creating post: Failed to create post: Failed to click post button
+[2025-07-30 23:38:37] INFO: SIGINT received, cleaning up...
+[2025-07-30 23:38:40] INFO: ✅ Server running on port 3000
+[2025-07-30 23:38:40] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-30 23:38:40] INFO: 🤖 X Posts Bot service is ready
+[2025-07-30 23:38:45] INFO: Authentication successful - IP: ::1
+[2025-07-30 23:38:45] INFO: Received post request: "Testing the X-Posts Bot Puppet..."
+[2025-07-30 23:38:45] INFO: Creating new post on X
+[2025-07-30 23:38:45] INFO: Ensured required directories exist
+[2025-07-30 23:38:45] INFO: No active session, creating new one
+[2025-07-30 23:38:46] INFO: Browser initialized successfully
+[2025-07-30 23:38:46] INFO: Restored cookies from storage
+[2025-07-30 23:38:55] INFO: Session is valid, user is logged in
+[2025-07-30 23:38:55] INFO: Cookies saved
+[2025-07-30 23:38:55] INFO: Auth token saved
+[2025-07-30 23:39:06] INFO: Attempting to click post button
+[2025-07-30 23:39:06] INFO: Attempting to click post button with multiple strategies
+[2025-07-30 23:39:07] INFO: Pre-click state screenshot at: C:\Users\nihed\Desktop\HechTask\screenshots\before_post_click_2025-07-30T22-39-06.png
+[2025-07-30 23:39:08] ERROR: Error trying to click post button: page.waitForTimeout is not a function. See: C:\Users\nihed\Desktop\HechTask\screenshots\post_click_error_2025-07-30T22-39-07.png
+[2025-07-30 23:39:08] INFO: Using direct script injection as a last resort
+[2025-07-30 23:39:09] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\before_direct_injection_post_2025-07-30T22-39-08-115Z.png
+[2025-07-30 23:39:09] INFO: Successfully clicked button via direct script injection
+[2025-07-30 23:39:41] ERROR: Error creating post: Timed out after waiting 30000ms
+[2025-07-30 23:39:41] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\post_error_2025-07-30T22-39-41-096Z.png
+[2025-07-30 23:39:41] ERROR: Error creating post: Failed to create post: Timed out after waiting 30000ms
+[2025-07-30 23:39:48] WARN: Browser disconnected
+[2025-07-30 23:44:20] INFO: SIGINT received, cleaning up...
+[2025-07-30 23:44:23] INFO: ✅ Server running on port 3000
+[2025-07-30 23:44:23] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-30 23:44:23] INFO: 🤖 X Posts Bot service is ready
+[2025-07-30 23:44:31] INFO: Authentication successful - IP: ::1
+[2025-07-30 23:44:31] INFO: Received post request: "Testing the X-Posts Bot Puppet..."
+[2025-07-30 23:44:31] INFO: Creating new post on X
+[2025-07-30 23:44:31] INFO: Ensured required directories exist
+[2025-07-30 23:44:31] INFO: No active session, creating new one
+[2025-07-30 23:44:31] INFO: Browser initialized successfully
+[2025-07-30 23:44:32] INFO: Restored cookies from storage
+[2025-07-30 23:44:40] INFO: Session is valid, user is logged in
+[2025-07-30 23:44:40] INFO: Cookies saved
+[2025-07-30 23:44:40] INFO: Auth token saved
+[2025-07-30 23:44:52] INFO: Attempting to click post button
+[2025-07-30 23:44:52] INFO: Attempting to click post button with multiple strategies
+[2025-07-30 23:44:52] INFO: Pre-click state screenshot at: C:\Users\nihed\Desktop\HechTask\screenshots\before_post_click_2025-07-30T22-44-52.png
+[2025-07-30 23:44:53] ERROR: Error trying to click post button: page.waitForTimeout is not a function. See: C:\Users\nihed\Desktop\HechTask\screenshots\post_click_error_2025-07-30T22-44-52.png
+[2025-07-30 23:44:53] INFO: Using direct script injection as a last resort
+[2025-07-30 23:44:54] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\before_direct_injection_post_2025-07-30T22-44-53-784Z.png
+[2025-07-30 23:44:54] INFO: Successfully clicked button via direct script injection
+[2025-07-30 23:44:57] INFO: Post successfully created on X
+[2025-07-30 23:45:02] INFO: Did not intercept CreateTweet response, but post appears successful based on UI
+[2025-07-30 23:45:03] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\post_success_2025-07-30T22-45-02-728Z.png
+[2025-07-30 23:45:05] INFO: Closing browser session after successful post
+[2025-07-30 23:45:05] INFO: Page closed successfully
+[2025-07-30 23:45:05] ERROR: Error creating post: browser is not defined
+[2025-07-30 23:45:05] ERROR: Failed to take screenshot: Protocol error (Page.bringToFront): Session closed. Most likely the page has been closed.
+[2025-07-30 23:45:05] ERROR: Error creating post: Failed to create post: browser is not defined
+[2025-07-30 23:48:33] INFO: SIGINT received, cleaning up...
+[2025-07-30 23:48:35] INFO: ✅ Server running on port 3000
+[2025-07-30 23:48:35] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-30 23:48:35] INFO: 🤖 X Posts Bot service is ready
+[2025-07-30 23:48:37] INFO: Authentication successful - IP: ::1
+[2025-07-30 23:48:37] INFO: Received post request: "Testing the X-Posts Bot Puppet..."
+[2025-07-30 23:48:37] INFO: Creating new post on X
+[2025-07-30 23:48:37] INFO: Ensured required directories exist
+[2025-07-30 23:48:37] INFO: No active session, creating new one
+[2025-07-30 23:48:37] INFO: Browser initialized successfully
+[2025-07-30 23:48:38] INFO: Restored cookies from storage
+[2025-07-30 23:48:46] INFO: Session is valid, user is logged in
+[2025-07-30 23:48:46] INFO: Cookies saved
+[2025-07-30 23:48:46] INFO: Auth token saved
+[2025-07-30 23:48:57] INFO: Attempting to click post button
+[2025-07-30 23:48:57] INFO: Attempting to click post button with multiple strategies
+[2025-07-30 23:48:58] INFO: Pre-click state screenshot at: C:\Users\nihed\Desktop\HechTask\screenshots\before_post_click_2025-07-30T22-48-57.png
+[2025-07-30 23:48:59] ERROR: Error trying to click post button: page.waitForTimeout is not a function. See: C:\Users\nihed\Desktop\HechTask\screenshots\post_click_error_2025-07-30T22-48-58.png
+[2025-07-30 23:48:59] INFO: Using direct script injection as a last resort
+[2025-07-30 23:48:59] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\before_direct_injection_post_2025-07-30T22-48-59-091Z.png
+[2025-07-30 23:49:00] INFO: Attempted click via script injection, proceeding with post
+[2025-07-30 23:49:03] INFO: Button clicked, assuming post is successful
+[2025-07-30 23:49:04] INFO: Post successfully created on X
+[2025-07-30 23:49:09] INFO: Did not intercept CreateTweet response, but post appears successful based on UI
+[2025-07-30 23:49:10] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\post_success_2025-07-30T22-49-09-571Z.png
+[2025-07-30 23:49:12] INFO: Closing browser session after successful post
+[2025-07-30 23:49:12] INFO: Page closed successfully
+[2025-07-30 23:49:12] ERROR: Error during browser cleanup: browser is not defined
+[2025-07-30 23:49:15] WARN: Browser disconnected
+[2025-07-30 23:51:40] INFO: SIGINT received, cleaning up...
+[2025-07-30 23:59:48] INFO: ✅ Server running on port 3000
+[2025-07-30 23:59:48] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-30 23:59:48] INFO: 🤖 X Posts Bot service is ready
+[2025-07-30 23:59:52] INFO: Authentication successful - IP: ::1
+[2025-07-30 23:59:52] INFO: Received reply request to https://x.com/CrackxTn07/status/1950690134602727616: "This is an automated reply fro..."
+[2025-07-30 23:59:52] INFO: Replying to post: https://x.com/CrackxTn07/status/1950690134602727616
+[2025-07-30 23:59:52] INFO: Ensured required directories exist
+[2025-07-30 23:59:52] INFO: No active session, creating new one
+[2025-07-30 23:59:53] INFO: Browser initialized successfully
+[2025-07-30 23:59:53] INFO: Restored cookies from storage
+[2025-07-31 00:00:01] INFO: Session is valid, user is logged in
+[2025-07-31 00:00:01] INFO: Cookies saved
+[2025-07-31 00:00:01] INFO: Auth token saved
+[2025-07-31 00:00:01] INFO: Extracted tweet ID: 1950690134602727616
+[2025-07-31 00:00:10] INFO: Attempting single reply button click to prevent duplicates
+[2025-07-31 00:00:10] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\before_reply_button_click_2025-07-30T23-00-10-523Z.png
+[2025-07-31 00:00:10] INFO: Reply button clicked, proceeding with reply
+[2025-07-31 00:00:13] INFO: Reply successfully posted on X
+[2025-07-31 00:00:19] INFO: Did not intercept CreateTweet response, but reply appears successful based on UI
+[2025-07-31 00:00:19] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\reply_success_2025-07-30T23-00-19-055Z.png
+[2025-07-31 00:00:21] INFO: Closing browser session after successful reply
+[2025-07-31 00:00:21] INFO: Page closed successfully
+[2025-07-31 00:00:21] ERROR: Error during browser cleanup: browser is not defined
+[2025-07-31 00:00:23] WARN: Browser disconnected
+[2025-07-31 00:00:52] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:00:52] INFO: Received post request: "ollaa bella 1753916452..."
+[2025-07-31 00:00:52] INFO: Creating new post on X
+[2025-07-31 00:00:52] INFO: Ensured required directories exist
+[2025-07-31 00:00:52] INFO: No active session, creating new one
+[2025-07-31 00:00:52] INFO: Browser initialized successfully
+[2025-07-31 00:00:52] INFO: Restored cookies from storage
+[2025-07-31 00:01:00] INFO: Session is valid, user is logged in
+[2025-07-31 00:01:00] INFO: Cookies saved
+[2025-07-31 00:01:00] INFO: Auth token saved
+[2025-07-31 00:01:06] INFO: Attempting single post button click to prevent duplicates
+[2025-07-31 00:01:07] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\before_post_button_click_2025-07-30T23-01-06-498Z.png
+[2025-07-31 00:01:07] INFO: Post button clicked, proceeding with post
+[2025-07-31 00:01:10] INFO: Post successfully created on X
+[2025-07-31 00:01:15] INFO: Did not intercept CreateTweet response, but post appears successful based on UI
+[2025-07-31 00:01:16] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\post_success_2025-07-30T23-01-15-421Z.png
+[2025-07-31 00:01:18] INFO: Closing browser session after successful post
+[2025-07-31 00:01:18] INFO: Page closed successfully
+[2025-07-31 00:01:18] ERROR: Error during browser cleanup: browser is not defined
+[2025-07-31 00:01:19] WARN: Browser disconnected
+[2025-07-31 00:01:49] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:01:49] INFO: Received reply request to https://x.com/CrackxTn07/status/1950693186395091174: "xD  1753916509..."
+[2025-07-31 00:01:49] INFO: Replying to post: https://x.com/CrackxTn07/status/1950693186395091174
+[2025-07-31 00:01:49] INFO: Ensured required directories exist
+[2025-07-31 00:01:49] INFO: No active session, creating new one
+[2025-07-31 00:01:49] INFO: Browser initialized successfully
+[2025-07-31 00:01:49] INFO: Restored cookies from storage
+[2025-07-31 00:01:55] INFO: Session is valid, user is logged in
+[2025-07-31 00:01:55] INFO: Cookies saved
+[2025-07-31 00:01:55] INFO: Auth token saved
+[2025-07-31 00:01:55] INFO: Extracted tweet ID: 1950693186395091174
+[2025-07-31 00:02:01] INFO: Attempting single reply button click to prevent duplicates
+[2025-07-31 00:02:01] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\before_reply_button_click_2025-07-30T23-02-01-319Z.png
+[2025-07-31 00:02:01] INFO: Reply button clicked, proceeding with reply
+[2025-07-31 00:02:04] INFO: Reply successfully posted on X
+[2025-07-31 00:02:09] INFO: Did not intercept CreateTweet response, but reply appears successful based on UI
+[2025-07-31 00:02:10] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\reply_success_2025-07-30T23-02-09-919Z.png
+[2025-07-31 00:02:12] INFO: Closing browser session after successful reply
+[2025-07-31 00:02:12] INFO: Page closed successfully
+[2025-07-31 00:02:12] ERROR: Error during browser cleanup: browser is not defined
+[2025-07-31 00:02:13] WARN: Browser disconnected
+[2025-07-31 00:08:54] INFO: SIGINT received, cleaning up...
+[2025-07-31 00:08:56] INFO: ✅ Server running on port 3000
+[2025-07-31 00:08:56] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 00:08:56] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 00:08:59] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:08:59] INFO: Received reply request to https://x.com/CrackxTn07/status/1950693186395091174: "xD  1753916940..."
+[2025-07-31 00:08:59] INFO: Replying to post: https://x.com/CrackxTn07/status/1950693186395091174
+[2025-07-31 00:08:59] INFO: Ensured required directories exist
+[2025-07-31 00:08:59] INFO: No active session, creating new one
+[2025-07-31 00:09:00] INFO: Browser initialized successfully
+[2025-07-31 00:09:00] INFO: Restored cookies from storage
+[2025-07-31 00:09:11] INFO: Session is valid, user is logged in
+[2025-07-31 00:09:11] INFO: Cookies saved
+[2025-07-31 00:09:11] INFO: Auth token saved
+[2025-07-31 00:09:11] INFO: Extracted tweet ID: 1950693186395091174
+[2025-07-31 00:09:16] INFO: Typing reply content...
+[2025-07-31 00:09:19] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\before_reply_button_click_2025-07-30T23-09-19-142Z.png
+[2025-07-31 00:09:19] INFO: Attempting to click reply button with enhanced approach
+[2025-07-31 00:09:19] INFO: Reply button click attempt result: true
+[2025-07-31 00:09:19] INFO: Proceeding with reply process
+[2025-07-31 00:09:22] INFO: Reply successfully posted on X
+[2025-07-31 00:09:27] INFO: Did not intercept CreateTweet response, but reply appears successful based on UI
+[2025-07-31 00:09:27] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\reply_success_2025-07-30T23-09-27-677Z.png
+[2025-07-31 00:09:29] INFO: Closing browser session after successful reply
+[2025-07-31 00:09:29] INFO: Page closed successfully
+[2025-07-31 00:09:29] ERROR: Error during browser cleanup: browser is not defined
+[2025-07-31 00:09:33] WARN: Browser disconnected
+[2025-07-31 00:14:54] INFO: SIGINT received, cleaning up...
+[2025-07-31 00:14:57] INFO: ✅ Server running on port 3000
+[2025-07-31 00:14:57] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 00:14:57] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 00:21:53] INFO: SIGINT received, cleaning up...
+[2025-07-31 00:21:56] INFO: ✅ Server running on port 3000
+[2025-07-31 00:21:56] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 00:21:56] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 00:22:02] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:22:02] INFO: Received reply request to https://x.com/CrackxTn07/status/1950693186395091174: "This is an automated reply fro..."
+[2025-07-31 00:22:02] INFO: Replying to post: https://x.com/CrackxTn07/status/1950693186395091174
+[2025-07-31 00:22:02] INFO: Ensured required directories exist
+[2025-07-31 00:22:02] INFO: No active session, creating new one
+[2025-07-31 00:22:02] INFO: Browser initialized successfully
+[2025-07-31 00:22:02] INFO: Restored cookies from storage
+[2025-07-31 00:22:12] INFO: Session is valid, user is logged in
+[2025-07-31 00:22:12] INFO: Cookies saved
+[2025-07-31 00:22:12] INFO: Auth token saved
+[2025-07-31 00:22:12] INFO: Extracted tweet ID: 1950693186395091174
+[2025-07-31 00:22:21] INFO: Attempting single reply button click to prevent duplicates
+[2025-07-31 00:22:22] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\before_reply_button_click_2025-07-30T23-22-21-611Z.png
+[2025-07-31 00:22:22] INFO: Reply button clicked, proceeding with reply
+[2025-07-31 00:22:22] INFO: Waiting 5 seconds to ensure reply is submitted
+[2025-07-31 00:22:27] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\after_reply_button_click_2025-07-30T23-22-27-067Z.png
+[2025-07-31 00:22:27] INFO: Reply successfully posted on X
+[2025-07-31 00:22:32] INFO: Did not intercept CreateTweet response, but reply appears successful based on UI
+[2025-07-31 00:22:32] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\reply_success_2025-07-30T23-22-32-360Z.png
+[2025-07-31 00:22:34] INFO: Closing browser session after successful reply
+[2025-07-31 00:22:34] INFO: Page closed successfully
+[2025-07-31 00:22:34] ERROR: Error during browser cleanup: browser is not defined
+[2025-07-31 00:24:29] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:24:29] INFO: Received reply request to https://x.com/CrackxTn07/status/1950693186395091174: "This is an automated reply fro..."
+[2025-07-31 00:24:29] INFO: Replying to post: https://x.com/CrackxTn07/status/1950693186395091174
+[2025-07-31 00:24:29] INFO: Ensured required directories exist
+[2025-07-31 00:24:29] INFO: No active session, creating new one
+[2025-07-31 00:24:29] INFO: Browser initialized successfully
+[2025-07-31 00:24:29] INFO: Restored cookies from storage
+[2025-07-31 00:24:38] INFO: Session is valid, user is logged in
+[2025-07-31 00:24:38] INFO: Cookies saved
+[2025-07-31 00:24:38] INFO: Auth token saved
+[2025-07-31 00:24:38] INFO: Extracted tweet ID: 1950693186395091174
+[2025-07-31 00:24:51] INFO: Attempting single reply button click to prevent duplicates
+[2025-07-31 00:24:51] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\before_reply_button_click_2025-07-30T23-24-51-496Z.png
+[2025-07-31 00:24:51] INFO: Reply button clicked, proceeding with reply
+[2025-07-31 00:24:51] INFO: Waiting 5 seconds to ensure reply is submitted
+[2025-07-31 00:24:57] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\after_reply_button_click_2025-07-30T23-24-56-719Z.png
+[2025-07-31 00:24:57] INFO: Reply successfully posted on X
+[2025-07-31 00:25:02] INFO: Did not intercept CreateTweet response, but reply appears successful based on UI
+[2025-07-31 00:25:02] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\reply_success_2025-07-30T23-25-02-040Z.png
+[2025-07-31 00:25:04] INFO: Closing browser session after successful reply
+[2025-07-31 00:25:04] INFO: Page closed successfully
+[2025-07-31 00:25:04] ERROR: Error during browser cleanup: browser is not defined
+[2025-07-31 00:25:05] WARN: Browser disconnected
+[2025-07-31 00:25:14] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:25:14] INFO: Ensured required directories exist
+[2025-07-31 00:25:15] INFO: Browser initialized successfully
+[2025-07-31 00:25:15] INFO: Restored cookies from storage
+[2025-07-31 00:25:25] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\session_status_2025-07-30T23-25-24-607Z.png
+[2025-07-31 00:25:33] WARN: Browser disconnected
+[2025-07-31 00:25:50] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:25:50] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:25:50] INFO: Starting direct post request for content: "Testing the X-Posts Bot Direct..."
+[2025-07-31 00:25:51] ERROR: Failed to extract main.js URL from X homepage
+[2025-07-31 00:25:51] ERROR: Error extracting bearer token: Failed to extract main.js URL from X homepage
+[2025-07-31 00:25:51] ERROR: Direct post request failed: Failed to extract main.js URL from X homepage
+[2025-07-31 00:25:51] ERROR: Error: Failed to extract main.js URL from X homepage
+[2025-07-31 00:25:51] ERROR: Error: Failed to extract main.js URL from X homepage
+    at getBearerToken (C:\Users\nihed\Desktop\HechTask\utils\tokenExtractor.js:29:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\nihed\Desktop\HechTask\routes\apiRoutes.js:49:25
+[2025-07-31 00:34:19] INFO: SIGINT received, cleaning up...
+[2025-07-31 00:34:36] INFO: ✅ Server running on port 3000
+[2025-07-31 00:34:36] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 00:34:36] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 00:34:53] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:34:53] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:34:53] ERROR: Validation errors: [{"type":"field","value":"","msg":"Guest ID is required","path":"guest_id","location":"body"}]
+[2025-07-31 00:35:38] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:35:38] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:35:38] INFO: Received direct post request: "Testing the X-Posts Bot Direct..."
+[2025-07-31 00:35:38] INFO: Creating direct post with content length: 108
+[2025-07-31 00:35:38] ERROR: Failed to extract main.js URL from X homepage
+[2025-07-31 00:35:38] ERROR: Error extracting bearer token: Failed to extract main.js URL from X homepage
+[2025-07-31 00:35:38] ERROR: Error in direct post: Failed to extract main.js URL from X homepage
+[2025-07-31 00:35:38] ERROR: Error creating direct post: Failed to extract main.js URL from X homepage
+[2025-07-31 00:45:05] INFO: SIGINT received, cleaning up...
+[2025-07-31 00:45:08] INFO: ✅ Server running on port 3000
+[2025-07-31 00:45:08] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 00:45:08] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 00:45:21] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:45:21] INFO: Received post request: "Testing the X-Posts Bot Puppet..."
+[2025-07-31 00:45:21] INFO: Creating new post on X
+[2025-07-31 00:45:21] INFO: Ensured required directories exist
+[2025-07-31 00:45:21] INFO: No active session, creating new one
+[2025-07-31 00:45:23] INFO: Browser initialized successfully
+[2025-07-31 00:45:23] INFO: Restored cookies from storage
+[2025-07-31 00:45:32] INFO: Session is valid, user is logged in
+[2025-07-31 00:45:32] INFO: Cookies saved
+[2025-07-31 00:45:32] INFO: Auth token saved
+[2025-07-31 00:45:44] INFO: Attempting single post button click to prevent duplicates
+[2025-07-31 00:45:45] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\before_post_button_click_2025-07-30T23-45-44-282Z.png
+[2025-07-31 00:45:45] INFO: Post button clicked, proceeding with post
+[2025-07-31 00:45:48] INFO: Post successfully created on X
+[2025-07-31 00:45:53] INFO: Did not intercept CreateTweet response, but post appears successful based on UI
+[2025-07-31 00:45:56] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\post_success_2025-07-30T23-45-53-752Z.png
+[2025-07-31 00:45:58] INFO: Closing browser session after successful post
+[2025-07-31 00:45:58] INFO: Page closed successfully
+[2025-07-31 00:45:58] ERROR: Error during browser cleanup: browser is not defined
+[2025-07-31 00:46:01] WARN: Browser disconnected
+[2025-07-31 00:46:12] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:46:12] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:46:12] INFO: Received direct post request: "Testing the X-Posts Bot Direct..."
+[2025-07-31 00:46:12] INFO: Creating direct post with content length: 108
+[2025-07-31 00:46:12] INFO: Found main.js URL using pattern: /src="(https:\/\/abs\.twimg\.com\/responsive-web\/client-web\/main\.[a-z0-9]+\.js)"/
+[2025-07-31 00:46:12] INFO: Found main.js URL: https://abs.twimg.com/responsive-web/client-web/main.98bdc34a.js
+[2025-07-31 00:46:13] INFO: Searching for bearer token in main.js
+[2025-07-31 00:46:13] DEBUG: JS content sample: window.__SCRIPTS_LOADED__.vendor&&((self.webpackChunk_twitter_responsive_web=self.webpackChunk_twitter_responsive_web||[]).push([["main"],{126738:(e,a,d)=>{var o=d(292426);o.loadLanguage.registerChunkLoader((function(e){return d(831893)(`./${e}`)}),["en","ar","ar-x-fm","bg","bn","ca","cs","da","de","el","en-GB","en-ss","en-xx","es","eu","fa","fi","fil","fr","ga","gl","gu","ha","he","hi","hr","hu","id","ig","it","ja","kn","ko","mr","ms","nb","nl","pl","pt","ro","ru","sk","sr","sv","ta","th","tr","uk","ur","vi","yo","zh","zh-Hant"]),e.exports=o},831893:(e,a,d)=>{var o={"./ar":[240421,"vendor-38c57b44","vendor-49d0a293","vendor-48a4958c","vendor-3dfac8a4","vendor-cb2d071c","vendor-91c40cd8","vendor-adcb47af","vendor-7940b00b","vendor-669c86db","vendor-3e5eb623","vendor-aaaf2b0c","vendor-c4d1d074","vendor-63e37921","vendor-de539588","vendor-ccf8c62e","vendor-eb8eaa08","vendor-6b20cc7c","vendor-821262ff","vendor-85aa29ea","vendor-e5bca7e4","vendor-49ceb22a","vendor-bfc04956","vendor-e395fec...
+[2025-07-31 00:46:13] INFO: Found bearer token using pattern: /"([a-zA-Z0-9%]{100,})"/
+[2025-07-31 00:46:13] INFO: Using capturing group bearer token match
+[2025-07-31 00:46:13] INFO: Bearer token extracted successfully
+[2025-07-31 00:46:13] INFO: Successfully obtained bearer token dynamically
+[2025-07-31 00:46:13] ERROR: Error reading auth token: ENOENT: no such file or directory, open 'C:\Users\nihed\Desktop\HechTask\auth_token.txt'
+[2025-07-31 00:46:13] ERROR: Error in direct post: Failed to read auth_token.txt. Please ensure it exists and contains a valid token.
+[2025-07-31 00:46:13] ERROR: Error creating direct post: Failed to read auth_token.txt. Please ensure it exists and contains a valid token.
+[2025-07-31 00:47:31] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:47:31] INFO: Starting auth token retrieval process
+[2025-07-31 00:47:31] INFO: Launching browser for auth token retrieval
+[2025-07-31 00:47:32] INFO: Opening X login page, waiting for manual login
+[2025-07-31 00:47:40] INFO: Waiting for auth_token cookie...
+[2025-07-31 00:48:05] INFO: Auth token retrieved successfully
+[2025-07-31 00:48:06] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\auth_token_retrieval_2025-07-30T23-48-05-635Z.png
+[2025-07-31 00:48:07] INFO: Auth token saved successfully to C:\Users\nihed\Desktop\HechTask\data\auth_token.txt
+[2025-07-31 00:49:44] INFO: SIGINT received, cleaning up...
+[2025-07-31 00:49:46] INFO: ✅ Server running on port 3000
+[2025-07-31 00:49:46] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 00:49:46] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 00:49:53] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:49:53] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:49:53] INFO: Received direct post request: "Testing the X-Posts Bot Direct..."
+[2025-07-31 00:49:53] INFO: Creating direct post with content length: 108
+[2025-07-31 00:49:54] INFO: Found main.js URL using pattern: /src="(https:\/\/abs\.twimg\.com\/responsive-web\/client-web\/main\.[a-z0-9]+\.js)"/
+[2025-07-31 00:49:54] INFO: Found main.js URL: https://abs.twimg.com/responsive-web/client-web/main.98bdc34a.js
+[2025-07-31 00:49:55] INFO: Searching for bearer token in main.js
+[2025-07-31 00:49:55] DEBUG: JS content sample: window.__SCRIPTS_LOADED__.vendor&&((self.webpackChunk_twitter_responsive_web=self.webpackChunk_twitter_responsive_web||[]).push([["main"],{126738:(e,a,d)=>{var o=d(292426);o.loadLanguage.registerChunkLoader((function(e){return d(831893)(`./${e}`)}),["en","ar","ar-x-fm","bg","bn","ca","cs","da","de","el","en-GB","en-ss","en-xx","es","eu","fa","fi","fil","fr","ga","gl","gu","ha","he","hi","hr","hu","id","ig","it","ja","kn","ko","mr","ms","nb","nl","pl","pt","ro","ru","sk","sr","sv","ta","th","tr","uk","ur","vi","yo","zh","zh-Hant"]),e.exports=o},831893:(e,a,d)=>{var o={"./ar":[240421,"vendor-38c57b44","vendor-49d0a293","vendor-48a4958c","vendor-3dfac8a4","vendor-cb2d071c","vendor-91c40cd8","vendor-adcb47af","vendor-7940b00b","vendor-669c86db","vendor-3e5eb623","vendor-aaaf2b0c","vendor-c4d1d074","vendor-63e37921","vendor-de539588","vendor-ccf8c62e","vendor-eb8eaa08","vendor-6b20cc7c","vendor-821262ff","vendor-85aa29ea","vendor-e5bca7e4","vendor-49ceb22a","vendor-bfc04956","vendor-e395fec...
+[2025-07-31 00:49:55] INFO: Found bearer token using pattern: /"([a-zA-Z0-9%]{100,})"/
+[2025-07-31 00:49:55] INFO: Using capturing group bearer token match
+[2025-07-31 00:49:55] INFO: Bearer token extracted successfully
+[2025-07-31 00:49:55] INFO: Successfully obtained bearer token dynamically
+[2025-07-31 00:49:55] INFO: Successfully read auth token from C:\Users\nihed\Desktop\HechTask\data\auth_token.txt
+[2025-07-31 00:49:55] INFO: Starting CT0 cookie retrieval process
+[2025-07-31 00:49:55] INFO: Found stored CT0 cookie, checking validity
+[2025-07-31 00:49:55] INFO: Successfully obtained CT0 cookie
+[2025-07-31 00:49:55] DEBUG: Generated XPFF header successfully
+[2025-07-31 00:49:55] INFO: Direct post API response status: 403
+[2025-07-31 00:49:55] ERROR: Direct post failed with status 403: {"errors":[{"code":353,"message":"This request requires a matching csrf cookie and header."}]}
+[2025-07-31 00:49:55] ERROR: Error in direct post: Direct post failed with status 403
+[2025-07-31 00:49:55] ERROR: Error creating direct post: Direct post failed with status 403
+[2025-07-31 00:56:35] INFO: SIGINT received, cleaning up...
+[2025-07-31 00:56:38] INFO: ✅ Server running on port 3000
+[2025-07-31 00:56:38] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 00:56:38] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 00:56:43] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:56:43] INFO: Authentication successful - IP: ::1
+[2025-07-31 00:56:43] INFO: Received direct post request: "Testing the X-Posts Bot Direct..."
+[2025-07-31 00:56:43] INFO: Creating direct post with content length: 108
+[2025-07-31 00:56:43] INFO: Starting CT0 cookie retrieval process
+[2025-07-31 00:56:43] INFO: Found stored CT0 cookie, checking validity
+[2025-07-31 00:56:43] DEBUG: Generated XPFF header successfully
+[2025-07-31 00:56:43] INFO: Direct post API response status: 403
+[2025-07-31 00:56:43] ERROR: Direct post failed with status 403: {"errors":[{"code":353,"message":"This request requires a matching csrf cookie and header."}]}
+[2025-07-31 00:56:43] ERROR: Error in direct post: Direct post failed with status 403
+[2025-07-31 00:56:43] ERROR: Error creating direct post: Direct post failed with status 403
+[2025-07-31 01:03:20] INFO: SIGINT received, cleaning up...
+[2025-07-31 01:10:31] INFO: ✅ Server running on port 3000
+[2025-07-31 01:10:31] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 01:10:31] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 01:10:39] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:10:39] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:10:39] INFO: Received direct post request: "Testing the X-Posts Bot Direct..."
+[2025-07-31 01:10:39] INFO: Creating direct post with content: Testing the X-Posts Bot Direct API! This is an automated post using GraphQL. #automation #testing 1753920640
+[2025-07-31 01:10:39] INFO: Auth token retrieved, length: 40
+[2025-07-31 01:10:39] INFO: Starting Go-style CT0 cookie retrieval process
+[2025-07-31 01:10:41] INFO: Navigating to x.com
+[2025-07-31 01:10:49] INFO: Injecting auth_token cookie
+[2025-07-31 01:10:49] INFO: Reloading page to apply cookie
+[2025-07-31 01:10:59] INFO: Retrieving all cookies
+[2025-07-31 01:10:59] INFO: Looking for ct0 cookie
+[2025-07-31 01:10:59] INFO: Successfully retrieved ct0 cookie: 3703dbfcf1abb0240710e4cba0a92691bbcb14f0bf715458b94dd0b1f8ab1e737ad62614caeb1bed2f7cf4b8334f9392b6f2a9c4e9cdbb1ea62b7f87fa567a3c78bc60e63a179f647ffabc8de9ce8c27
+[2025-07-31 01:11:00] INFO: CT0 cookie retrieved: 3703dbfcf1abb0240710e4cba0a92691bbcb14f0bf715458b94dd0b1f8ab1e737ad62614caeb1bed2f7cf4b8334f9392b6f2a9c4e9cdbb1ea62b7f87fa567a3c78bc60e63a179f647ffabc8de9ce8c27
+[2025-07-31 01:11:00] DEBUG: Generated XPFF header successfully
+[2025-07-31 01:11:00] INFO: XPFF header generated for guestID: v1%3A175379720523324276
+[2025-07-31 01:11:00] INFO: === GO-STYLE REQUEST DETAILS ===
+[2025-07-31 01:11:00] INFO: Cookie: auth_token=40c3a2a44a255b88f78b4d8b477e48aba9442a9b; ct0=3703dbfcf1abb0240710e4cba0a92691bbcb14f0bf715458b94dd0b1f8ab1e737ad62614caeb1bed2f7cf4b8334f9392b6f2a9c4e9cdbb1ea62b7f87fa567a3c78bc60e63a179f647ffabc8de9ce8c27
+[2025-07-31 01:11:00] INFO: X-Csrf-Token: 3703dbfcf1abb0240710e4cba0a92691bbcb14f0bf715458b94dd0b1f8ab1e737ad62614caeb1bed2f7cf4b8334f9392b6f2a9c4e9cdbb1ea62b7f87fa567a3c78bc60e63a179f647ffabc8de9ce8c27
+[2025-07-31 01:11:00] INFO: Content-Length: 1915
+[2025-07-31 01:11:00] INFO: X-Xp-Forwarded-For: cf129e6f786700390393dc727a385c54716af0452e5138e958782fceb7c699d6d5c740eafca96690d3999b702622db7a3149ec8aecdf06284a698df975adaa5352caac2c322bab527e7b9157b7ddeee2bfaab059787f41828194a256e29c4bf92d8183abf0fe56259acc0d1fd155e0ea117c485e2b9111c178ae03b8ceb8aeb5769f3f229cd43f5f2ec332e90dcdcc0f107fd62f4332f36f8edadedee6eba42bed563c183895a05829ce7cbaf97688fd01d5827720fb0623cc95297a9a892ad11498f965a180acdb77f2fdd47ddd14a2f7547de9678961ef09f6a6c676acbafdbec28f9a62f74181a9886bf2d45889f819e511f1e295f2ee0a7e
+[2025-07-31 01:11:00] INFO: =================================
+[2025-07-31 01:11:00] INFO: Response Status: 200
+[2025-07-31 01:11:00] INFO: Post successful
+[2025-07-31 01:11:36] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:11:36] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:11:36] ERROR: Validation errors: [{"type":"field","value":"","msg":"Post URL is required","path":"post_url","location":"body"},{"type":"field","value":"","msg":"Invalid post URL format","path":"post_url","location":"body"},{"type":"field","value":"","msg":"Guest ID is required","path":"guest_id","location":"body"}]
+[2025-07-31 01:11:53] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:11:53] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:11:53] ERROR: Validation errors: [{"type":"field","value":"","msg":"Guest ID is required","path":"guest_id","location":"body"}]
+[2025-07-31 01:12:03] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:12:03] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:12:03] ERROR: Validation errors: [{"type":"field","value":"","msg":"Guest ID is required","path":"guest_id","location":"body"}]
+[2025-07-31 01:14:24] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:14:24] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:14:24] INFO: Received direct reply request: "This is an automated reply fro..." to post https://x.com/username/status/1234567890123456789
+[2025-07-31 01:14:24] INFO: Creating direct reply to https://x.com/username/status/1234567890123456789 with content: This is an automated reply from the X-Posts Bot Direct API! #testing 1753920865
+[2025-07-31 01:14:24] INFO: Extracted tweet ID: 1234567890123456789
+[2025-07-31 01:14:24] INFO: Auth token retrieved, length: 40
+[2025-07-31 01:14:24] INFO: Starting Go-style CT0 cookie retrieval process
+[2025-07-31 01:14:25] INFO: Navigating to x.com
+[2025-07-31 01:14:40] INFO: Injecting auth_token cookie
+[2025-07-31 01:14:40] INFO: Reloading page to apply cookie
+[2025-07-31 01:14:51] INFO: Retrieving all cookies
+[2025-07-31 01:14:51] INFO: Looking for ct0 cookie
+[2025-07-31 01:14:51] INFO: Successfully retrieved ct0 cookie: b396ac5fd2a15b415b1be6da0daf5032dbe752a6fbd87285f07dc53d9c914e302e5fff9dbb3d82b6144fa62f0717424d3c16d613b964c355f18434a433cb18682c7fdc16a7cd022dc4ca634f7f13f42e
+[2025-07-31 01:14:51] INFO: CT0 cookie retrieved: b396ac5fd2a15b415b1be6da0daf5032dbe752a6fbd87285f07dc53d9c914e302e5fff9dbb3d82b6144fa62f0717424d3c16d613b964c355f18434a433cb18682c7fdc16a7cd022dc4ca634f7f13f42e
+[2025-07-31 01:14:51] DEBUG: Generated XPFF header successfully
+[2025-07-31 01:14:51] INFO: XPFF header generated for guestID: {{guest_id}}
+[2025-07-31 01:14:51] INFO: === GO-STYLE REPLY REQUEST DETAILS ===
+[2025-07-31 01:14:51] INFO: Cookie: auth_token=40c3a2a44a255b88f78b4d8b477e48aba9442a9b; ct0=b396ac5fd2a15b415b1be6da0daf5032dbe752a6fbd87285f07dc53d9c914e302e5fff9dbb3d82b6144fa62f0717424d3c16d613b964c355f18434a433cb18682c7fdc16a7cd022dc4ca634f7f13f42e
+[2025-07-31 01:14:51] INFO: X-Csrf-Token: b396ac5fd2a15b415b1be6da0daf5032dbe752a6fbd87285f07dc53d9c914e302e5fff9dbb3d82b6144fa62f0717424d3c16d613b964c355f18434a433cb18682c7fdc16a7cd022dc4ca634f7f13f42e
+[2025-07-31 01:14:51] INFO: Content-Length: 1969
+[2025-07-31 01:14:51] INFO: X-Xp-Forwarded-For: 1450f389e307d40db98f404197ea5d713cb61172ebbec5570c59053cc3dbbd0f0798164db4df9b6cdb2e1133c2b403eac56069eb5343520985da788ee4b1016a0c0970c3ad64ffed4841771a6a50b975ee19ff9ea26d889c81610822d79a97a89ca83c5974f42a622ab0552a320c9fa9e87710923957786643ef749a4a4fa6b0ad585e21f70200634f98023e94dbc06e0f76409aeb61761d5f51c234e1a072d65b338ce7fcab9cafbd3be803b63e8996ae0a8803a9f609b9681d694022766855179f37f7b8b036ba25d7627d3984cf05634203c14dec73a14adb2751bf33323773d8e223ec1d894c6feb6d6f431835c2eb994d8603774e17b283
+[2025-07-31 01:14:51] INFO: Tweet ID: 1234567890123456789
+[2025-07-31 01:14:51] INFO: ========================================
+[2025-07-31 01:14:51] INFO: Response Status: 200
+[2025-07-31 01:14:51] INFO: Reply successful
+[2025-07-31 01:16:43] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:16:43] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:16:43] INFO: Received direct reply request: "This is an automated reply fro..." to post https://x.com/username/status/1234567890123456789
+[2025-07-31 01:16:43] INFO: Creating direct reply to https://x.com/username/status/1234567890123456789 with content: This is an automated reply from the X-Posts Bot Direct API! #testing 1753921003
+[2025-07-31 01:16:43] INFO: Extracted tweet ID: 1234567890123456789
+[2025-07-31 01:16:43] INFO: Auth token retrieved, length: 40
+[2025-07-31 01:16:43] INFO: Starting Go-style CT0 cookie retrieval process
+[2025-07-31 01:16:43] INFO: Navigating to x.com
+[2025-07-31 01:16:52] INFO: Injecting auth_token cookie
+[2025-07-31 01:16:52] INFO: Reloading page to apply cookie
+[2025-07-31 01:17:01] INFO: Retrieving all cookies
+[2025-07-31 01:17:01] INFO: Looking for ct0 cookie
+[2025-07-31 01:17:01] INFO: Successfully retrieved ct0 cookie: 445c4dedad526bd813b7bfbe390cda9e1bd30679645c20575bc333558d1a4e9c074e39b77efb9e33a79891e6d1e7a97f78ad2e0fe6b2d9f4fd20967882be8be019b12cc6ef12f78bc7c5c3ca6f25e945
+[2025-07-31 01:17:02] INFO: CT0 cookie retrieved: 445c4dedad526bd813b7bfbe390cda9e1bd30679645c20575bc333558d1a4e9c074e39b77efb9e33a79891e6d1e7a97f78ad2e0fe6b2d9f4fd20967882be8be019b12cc6ef12f78bc7c5c3ca6f25e945
+[2025-07-31 01:17:02] DEBUG: Generated XPFF header successfully
+[2025-07-31 01:17:02] INFO: XPFF header generated for guestID: v1%3A175379720523324276
+[2025-07-31 01:17:02] INFO: === GO-STYLE REPLY REQUEST DETAILS ===
+[2025-07-31 01:17:02] INFO: Cookie: auth_token=40c3a2a44a255b88f78b4d8b477e48aba9442a9b; ct0=445c4dedad526bd813b7bfbe390cda9e1bd30679645c20575bc333558d1a4e9c074e39b77efb9e33a79891e6d1e7a97f78ad2e0fe6b2d9f4fd20967882be8be019b12cc6ef12f78bc7c5c3ca6f25e945
+[2025-07-31 01:17:02] INFO: X-Csrf-Token: 445c4dedad526bd813b7bfbe390cda9e1bd30679645c20575bc333558d1a4e9c074e39b77efb9e33a79891e6d1e7a97f78ad2e0fe6b2d9f4fd20967882be8be019b12cc6ef12f78bc7c5c3ca6f25e945
+[2025-07-31 01:17:02] INFO: Content-Length: 1969
+[2025-07-31 01:17:02] INFO: X-Xp-Forwarded-For: 2f1247b34735062073c4fdd8767076b179fedc823c7efae7caf22171f286e092a1dfd8b40fcc022eee577fe9a881b74aec8ff707576b224dfb3325bbc6f14cdb1edde777da903a0a43ccc44cb37e663c10b18ef255b1b585a1a9ae6f67ea642be2219541c8c77dca0ff8d8c877e2872d6eec7836db9a20a0836e4094931f5a020b60e3208b2b6c6ab04c4610829fcbff95d83c9b2c36470d8ac492e079128a0921ab959073da49f94891205b2609f1cee1a59e2781ac5f44b2ae4d27dca42bdf70add979e4468969b67bbbd9aadfbc0ff85d415c92221c392fd780a0115f00c845ff40d8f9f5284066185e99b3827ec20047e861c2c935f07efd
+[2025-07-31 01:17:02] INFO: Tweet ID: 1234567890123456789
+[2025-07-31 01:17:02] INFO: ========================================
+[2025-07-31 01:17:02] INFO: Response Status: 200
+[2025-07-31 01:17:02] INFO: Reply successful
+[2025-07-31 01:26:10] INFO: SIGINT received, cleaning up...
+[2025-07-31 01:26:13] INFO: ✅ Server running on port 3000
+[2025-07-31 01:26:13] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 01:26:13] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 01:26:19] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:26:19] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:26:19] INFO: Received direct reply request: "This is an automated reply fro..." to post https://x.com/username/status/1234567890123456789
+[2025-07-31 01:26:19] INFO: Creating direct reply to https://x.com/username/status/1234567890123456789 with content: This is an automated reply from the X-Posts Bot Direct API! #testing 1753921579
+[2025-07-31 01:26:19] INFO: Extracted tweet ID: 1234567890123456789
+[2025-07-31 01:26:19] INFO: Auth token retrieved, length: 40
+[2025-07-31 01:26:19] INFO: Starting Go-style CT0 cookie retrieval process
+[2025-07-31 01:26:20] INFO: Navigating to x.com
+[2025-07-31 01:26:27] INFO: Injecting auth_token cookie
+[2025-07-31 01:26:27] INFO: Reloading page to apply cookie
+[2025-07-31 01:26:37] INFO: Retrieving all cookies
+[2025-07-31 01:26:37] INFO: Looking for ct0 cookie
+[2025-07-31 01:26:37] INFO: Successfully retrieved ct0 cookie: 395f7d0194c5385d432b62e211b6d97ec1c3e57c7528ca2679f89ba6b64f4bcc71118485936fbca0447cf60d2526438212021fc30b22d7b3f17b2a85ed4aa5882de90998a4091af8ea3d1e014fe2ef64
+[2025-07-31 01:26:37] INFO: CT0 cookie retrieved: 395f7d0194c5385d432b62e211b6d97ec1c3e57c7528ca2679f89ba6b64f4bcc71118485936fbca0447cf60d2526438212021fc30b22d7b3f17b2a85ed4aa5882de90998a4091af8ea3d1e014fe2ef64
+[2025-07-31 01:26:37] DEBUG: Generated XPFF header successfully
+[2025-07-31 01:26:37] INFO: XPFF header generated for guestID: v1%3A175379720523324276
+[2025-07-31 01:26:37] INFO: Reply request body structure:
+[2025-07-31 01:26:37] INFO: {
+  "tweet_text": "This is an automated reply from the X-Posts Bot Direct API! #testing 1753921579\n",
+  "reply_to_tweet_id": "1234567890123456789"
+}
+[2025-07-31 01:26:37] INFO: === GO-STYLE REPLY REQUEST DETAILS ===
+[2025-07-31 01:26:37] INFO: Cookie: auth_token=40c3a2a44a255b88f78b4d8b477e48aba9442a9b; ct0=395f7d0194c5385d432b62e211b6d97ec1c3e57c7528ca2679f89ba6b64f4bcc71118485936fbca0447cf60d2526438212021fc30b22d7b3f17b2a85ed4aa5882de90998a4091af8ea3d1e014fe2ef64
+[2025-07-31 01:26:37] INFO: X-Csrf-Token: 395f7d0194c5385d432b62e211b6d97ec1c3e57c7528ca2679f89ba6b64f4bcc71118485936fbca0447cf60d2526438212021fc30b22d7b3f17b2a85ed4aa5882de90998a4091af8ea3d1e014fe2ef64
+[2025-07-31 01:26:37] INFO: Content-Length: 1969
+[2025-07-31 01:26:37] INFO: X-Xp-Forwarded-For: cdde3a756c32c16423f3e564918a97aa99d596f57878312aa74b7661ca0e7c29d0c1b84d62dbfc2416bbe13727dc698256c3a0cc6359fe4423f617bb6d0810adf3e77332e6cec3a5987eb4989cc80a13c26992c405f1814451b90373042c1a27106fee6baa2f76cbae74ff7180eba090d975d2171e3625c6697e96313bab84ae4be698c9f47293596817eba27e1d00f0138f62d315fd188cb73520cae7287d3df599e85c451f661fb020fbc9332bbd2ba7b135c7e2d94d5085696eebeb67b22ffc140a79272bddf8d85bc56cebc54af30744e75b0a87b0f1c8cc4b8b0c264e1f86751ebf49f32097132e8126b44de9075f974dffe2ec06da786e
+[2025-07-31 01:26:37] INFO: Reply to Tweet ID: 1234567890123456789
+[2025-07-31 01:26:37] INFO: ========================================
+[2025-07-31 01:26:38] INFO: Reply response status: 200
+[2025-07-31 01:26:38] INFO: Full reply response data:
+[2025-07-31 01:26:38] INFO: {
+  "errors": [
+    {
+      "message": "Authorization: You attempted to reply to a Tweet that is deleted or not visible to you. (385)",
+      "locations": [
+        {
+          "line": 18,
+          "column": 3
+        }
+      ],
+      "path": [
+        "create_tweet"
+      ],
+      "extensions": {
+        "name": "AuthorizationError",
+        "source": "Client",
+        "code": 385,
+        "kind": "Permissions",
+        "tracing": {
+          "trace_id": "01b41e238de8442d"
+        }
+      },
+      "code": 385,
+      "kind": "Permissions",
+      "name": "AuthorizationError",
+      "source": "Client",
+      "tracing": {
+        "trace_id": "01b41e238de8442d"
+      }
+    }
+  ],
+  "data": {}
+}
+[2025-07-31 01:26:38] ERROR: Response status 200 but could not find tweet ID in response
+[2025-07-31 01:26:38] ERROR: API returned errors: [{"message":"Authorization: You attempted to reply to a Tweet that is deleted or not visible to you. (385)","locations":[{"line":18,"column":3}],"path":["create_tweet"],"extensions":{"name":"AuthorizationError","source":"Client","code":385,"kind":"Permissions","tracing":{"trace_id":"01b41e238de8442d"}},"code":385,"kind":"Permissions","name":"AuthorizationError","source":"Client","tracing":{"trace_id":"01b41e238de8442d"}}]
+[2025-07-31 01:28:51] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:28:51] INFO: Authentication successful - IP: ::1
+[2025-07-31 01:28:51] INFO: Received direct reply request: "This is an automated reply fro..." to post https://x.com/TheDonOfApes/status/1923702341988909176
+[2025-07-31 01:28:51] INFO: Creating direct reply to https://x.com/TheDonOfApes/status/1923702341988909176 with content: This is an automated reply from the X-Posts Bot Direct API! #testing 1753921731
+[2025-07-31 01:28:51] INFO: Extracted tweet ID: 1923702341988909176
+[2025-07-31 01:28:51] INFO: Auth token retrieved, length: 40
+[2025-07-31 01:28:51] INFO: Starting Go-style CT0 cookie retrieval process
+[2025-07-31 01:28:52] INFO: Navigating to x.com
+[2025-07-31 01:29:00] INFO: Injecting auth_token cookie
+[2025-07-31 01:29:00] INFO: Reloading page to apply cookie
+[2025-07-31 01:29:13] INFO: Retrieving all cookies
+[2025-07-31 01:29:13] INFO: Looking for ct0 cookie
+[2025-07-31 01:29:13] INFO: Successfully retrieved ct0 cookie: 3dabc50e259291c3561865c65bbf7252da0b18a73ada00c9fa0a451c2e17a1877453ea9879f8b811e85028a11c7c316494ec78024f2eabbdde13deaf043bfc03e62747e78820e5845a36248435cbe9e5
+[2025-07-31 01:29:13] INFO: CT0 cookie retrieved: 3dabc50e259291c3561865c65bbf7252da0b18a73ada00c9fa0a451c2e17a1877453ea9879f8b811e85028a11c7c316494ec78024f2eabbdde13deaf043bfc03e62747e78820e5845a36248435cbe9e5
+[2025-07-31 01:29:13] DEBUG: Generated XPFF header successfully
+[2025-07-31 01:29:13] INFO: XPFF header generated for guestID: v1%3A175379720523324276
+[2025-07-31 01:29:13] INFO: Reply request body structure:
+[2025-07-31 01:29:13] INFO: {
+  "tweet_text": "This is an automated reply from the X-Posts Bot Direct API! #testing 1753921731\n",
+  "reply_to_tweet_id": "1923702341988909176"
+}
+[2025-07-31 01:29:13] INFO: === GO-STYLE REPLY REQUEST DETAILS ===
+[2025-07-31 01:29:13] INFO: Cookie: auth_token=40c3a2a44a255b88f78b4d8b477e48aba9442a9b; ct0=3dabc50e259291c3561865c65bbf7252da0b18a73ada00c9fa0a451c2e17a1877453ea9879f8b811e85028a11c7c316494ec78024f2eabbdde13deaf043bfc03e62747e78820e5845a36248435cbe9e5
+[2025-07-31 01:29:13] INFO: X-Csrf-Token: 3dabc50e259291c3561865c65bbf7252da0b18a73ada00c9fa0a451c2e17a1877453ea9879f8b811e85028a11c7c316494ec78024f2eabbdde13deaf043bfc03e62747e78820e5845a36248435cbe9e5
+[2025-07-31 01:29:13] INFO: Content-Length: 1969
+[2025-07-31 01:29:13] INFO: X-Xp-Forwarded-For: 1f96c982d9d8b172e974ba570635b9b9255ee493853a1475d8a929761383d03205d3e6fab1ef5eca481c9137065db672920742628d2e42f92f5d1bee7694dc5418b9fdeeded1373a283fd28bcb1b46dcb4a75b9d310566457462dc80858c4c26cfa88af0310c1315f483506b93a729bc1719b4de68a26d61ba3c08df493f41031e762e1b8cd85e2f23f74ecd189e4032559b05d33df2bb037a29c98b6ce470cceb95854b96a2b837c035bfc9f1404f7015f2134a063f0d0ed1510eb76ed2eebe0ca6fcb700990a7c9415069a0c8af036ae7e7f97d8638fc0aa2e6278cdab1f90339565ab38ab7db4537c4db168e47c096170c05a0713246270fa
+[2025-07-31 01:29:13] INFO: Reply to Tweet ID: 1923702341988909176
+[2025-07-31 01:29:13] INFO: ========================================
+[2025-07-31 01:29:14] INFO: Reply response status: 200
+[2025-07-31 01:29:14] INFO: Full reply response data:
+[2025-07-31 01:29:14] INFO: {
+  "data": {
+    "create_tweet": {
+      "tweet_results": {
+        "result": {
+          "rest_id": "1950715357364179412",
+          "core": {
+            "user_results": {
+              "result": {
+                "__typename": "User",
+                "id": "VXNlcjoxODkzODMwMDQyNTkwODcxNTUz",
+                "rest_id": "1893830042590871553",
+                "affiliates_highlighted_label": {},
+                "avatar": {
+                  "image_url": "https://pbs.twimg.com/profile_images/1893830146316181504/8yKOSmqe_normal.jpg"
+                },
+                "core": {
+                  "created_at": "Mon Feb 24 01:07:46 +0000 2025",
+                  "name": "nihed abdennour",
+                  "screen_name": "CrackxTn07"
+                },
+                "dm_permissions": {
+                  "can_dm": true
+                },
+                "has_graduated_access": false,
+                "is_blue_verified": false,
+                "legacy": {
+                  "default_profile": true,
+                  "default_profile_image": false,
+                  "description": "",
+                  "entities": {
+                    "description": {
+                      "urls": []
+                    }
+                  },
+                  "fast_followers_count": 0,
+                  "favourites_count": 0,
+                  "followers_count": 0,
+                  "friends_count": 3,
+                  "has_custom_timelines": false,
+                  "is_translator": false,
+                  "listed_count": 0,
+                  "media_count": 0,
+                  "needs_phone_verification": false,
+                  "normal_followers_count": 0,
+                  "pinned_tweet_ids_str": [],
+                  "possibly_sensitive": false,
+                  "profile_interstitial_type": "",
+                  "statuses_count": 33,
+                  "translator_type": "none",
+                  "want_retweets": false,
+                  "withheld_in_countries": []
+                },
+                "location": {
+                  "location": ""
+                },
+                "media_permissions": {
+                  "can_media_tag": true
+                },
+                "parody_commentary_fan_label": "None",
+                "profile_image_shape": "Circle",
+                "privacy": {
+                  "protected": false
+                },
+                "relationship_perspectives": {
+                  "following": false
+                },
+                "tipjar_settings": {},
+                "verification": {
+                  "verified": false
+                }
+              }
+            }
+          },
+          "unmention_data": {},
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1950715357364179412"
+            ],
+            "editable_until_msecs": "1753925358000",
+            "is_edit_eligible": false,
+            "edits_remaining": "5"
+          },
+          "is_translatable": false,
+          "views": {
+            "state": "Enabled"
+          },
+          "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+          "grok_analysis_button": true,
+          "legacy": {
+            "bookmark_count": 0,
+            "bookmarked": false,
+            "created_at": "Thu Jul 31 00:29:18 +0000 2025",
+            "conversation_id_str": "1923702341988909176",
+            "display_text_range": [
+              14,
+              93
+            ],
+            "entities": {
+              "hashtags": [
+                {
+                  "indices": [
+                    74,
+                    82
+                  ],
+                  "text": "testing"
+                }
+              ],
+              "symbols": [],
+              "timestamps": [],
+              "urls": [],
+              "user_mentions": [
+                {
+                  "id_str": "1294405141546897408",
+                  "name": "Don",
+                  "screen_name": "TheDonOfApes",
+                  "indices": [
+                    0,
+                    13
+                  ]
+                }
+              ]
+            },
+            "favorite_count": 0,
+            "favorited": false,
+            "full_text": "@TheDonOfApes This is an automated reply from the X-Posts Bot Direct API! #testing 1753921731",
+            "in_reply_to_screen_name": "TheDonOfApes",
+            "in_reply_to_status_id_str": "1923702341988909176",
+            "in_reply_to_user_id_str": "1294405141546897408",
+            "is_quote_status": false,
+            "lang": "en",
+            "quote_count": 0,
+            "reply_count": 0,
+            "retweet_count": 0,
+            "retweeted": false,
+            "user_id_str": "1893830042590871553",
+            "id_str": "1950715357364179412"
+          },
+          "unmention_info": {}
+        }
+      }
+    }
+  }
+}
+[2025-07-31 01:29:14] INFO: Reply successful, new tweet ID: 1950715357364179412
+[2025-07-31 01:40:33] INFO: SIGINT received, cleaning up...
+[2025-07-31 10:37:51] INFO: ✅ Server running on port 3000
+[2025-07-31 10:37:51] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 10:37:51] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 10:38:00] INFO: Authentication successful - IP: ::1
+[2025-07-31 10:38:00] INFO: Ensured required directories exist
+[2025-07-31 10:38:01] INFO: Browser initialized successfully
+[2025-07-31 10:38:02] INFO: Restored cookies from storage
+[2025-07-31 10:38:04] WARN: Browser disconnected
+[2025-07-31 10:38:04] ERROR: Error checking session status: Navigating frame was detached
+[2025-07-31 10:38:04] ERROR: Error checking session status: Failed to check session status: Navigating frame was detached
+[2025-07-31 10:48:34] INFO: SIGINT received, cleaning up...
+[2025-07-31 10:48:37] INFO: ✅ Server running on port 3000
+[2025-07-31 10:48:37] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 10:48:37] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 10:57:45] INFO: SIGINT received, cleaning up...
+[2025-07-31 13:09:57] INFO: ✅ Server running on port 3000
+[2025-07-31 13:09:57] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 13:09:57] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 13:10:04] INFO: Authentication successful - IP: ::1
+[2025-07-31 13:10:04] INFO: Received post request: "Testing the X-Posts Bot Puppet..."
+[2025-07-31 13:10:04] INFO: Creating new post on X
+[2025-07-31 13:10:04] INFO: Ensured required directories exist
+[2025-07-31 13:10:04] INFO: No active session, creating new one
+[2025-07-31 13:10:04] INFO: Ensured required directories exist
+[2025-07-31 13:10:04] INFO: Configured proxy using host/port: gw.dataimpulse.com:10000
+[2025-07-31 13:10:05] INFO: Browser initialized successfully
+[2025-07-31 13:10:05] INFO: Proxy authentication applied successfully
+[2025-07-31 13:10:05] INFO: Loaded stored cookies
+[2025-07-31 13:10:05] INFO: New browser session created
+[2025-07-31 13:10:35] ERROR: Session validation failed: Navigation timeout of 30000 ms exceeded
+[2025-07-31 13:10:35] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\session_error_2025-07-31T12-10-35-503Z.png
+[2025-07-31 13:10:35] ERROR: Error creating post: Session validation failed: Navigation timeout of 30000 ms exceeded
+[2025-07-31 13:10:35] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\post_error_2025-07-31T12-10-35-580Z.png
+[2025-07-31 13:10:35] ERROR: Error creating post: Failed to create post: Session validation failed: Navigation timeout of 30000 ms exceeded
+[2025-07-31 13:11:23] WARN: Browser disconnected
+[2025-07-31 13:11:40] INFO: SIGINT received, cleaning up...
+[2025-07-31 13:11:42] INFO: ✅ Server running on port 3000
+[2025-07-31 13:11:42] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 13:11:42] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 13:11:52] INFO: Authentication successful - IP: ::1
+[2025-07-31 13:11:52] INFO: Ensured required directories exist
+[2025-07-31 13:11:53] INFO: Browser initialized successfully
+[2025-07-31 13:11:53] INFO: Restored cookies from storage
+[2025-07-31 13:11:55] WARN: Browser disconnected
+[2025-07-31 13:11:55] ERROR: Error checking session status: Navigating frame was detached
+[2025-07-31 13:11:55] ERROR: Error checking session status: Failed to check session status: Navigating frame was detached
+[2025-07-31 13:26:27] INFO: SIGINT received, cleaning up...
+[2025-07-31 13:26:55] INFO: ✅ Server running on port 3000
+[2025-07-31 13:26:55] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 13:26:55] INFO: Creating proxy agent for gw.dataimpulse.com:10000
+[2025-07-31 13:26:55] INFO: Proxy connection check: FAILED (199ms)
+[2025-07-31 13:26:55] WARN: ⚠️ Proxy connection unavailable: null. Service will still start but proxy functionality may be limited.
+[2025-07-31 13:26:55] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 13:27:07] INFO: SIGINT received, cleaning up...
+[2025-07-31 13:27:10] INFO: ✅ Server running on port 3000
+[2025-07-31 13:27:10] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 13:27:10] INFO: Creating proxy agent for gw.dataimpulse.com:10000
+[2025-07-31 13:27:10] INFO: Proxy connection check: FAILED (293ms)
+[2025-07-31 13:27:10] WARN: ⚠️ Proxy connection unavailable: null. Service will still start but proxy functionality may be limited.
+[2025-07-31 13:27:10] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 13:27:31] INFO: Authentication successful - IP: ::1
+[2025-07-31 13:27:31] INFO: Received post request: "Testing the X-Posts Bot Puppet..."
+[2025-07-31 13:27:31] INFO: Creating new post on X
+[2025-07-31 13:27:31] INFO: Ensured required directories exist
+[2025-07-31 13:27:31] INFO: No active session, creating new one
+[2025-07-31 13:27:33] INFO: Browser initialized successfully
+[2025-07-31 13:27:33] INFO: Restored cookies from storage
+[2025-07-31 13:27:43] INFO: Session is valid, user is logged in
+[2025-07-31 13:27:43] INFO: Cookies saved
+[2025-07-31 13:27:43] INFO: Auth token saved
+[2025-07-31 13:28:01] INFO: Attempting single post button click to prevent duplicates
+[2025-07-31 13:28:02] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\before_post_button_click_2025-07-31T12-28-01-485Z.png
+[2025-07-31 13:28:02] INFO: Post button clicked, proceeding with post
+[2025-07-31 13:28:05] INFO: Post successfully created on X
+[2025-07-31 13:28:10] INFO: Did not intercept CreateTweet response, but post appears successful based on UI
+[2025-07-31 13:28:11] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\post_success_2025-07-31T12-28-10-490Z.png
+[2025-07-31 13:28:13] INFO: Closing browser session after successful post
+[2025-07-31 13:28:13] INFO: Page closed successfully
+[2025-07-31 13:28:13] ERROR: Error during browser cleanup: browser is not defined
+[2025-07-31 13:28:15] WARN: Browser disconnected
+[2025-07-31 13:41:33] INFO: SIGINT received, cleaning up...
+[2025-07-31 13:41:37] INFO: ✅ Server running on port 3000
+[2025-07-31 13:41:37] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 13:41:37] INFO: Creating proxy agent for gw.dataimpulse.com:10000 with authentication
+[2025-07-31 13:41:37] INFO: Proxy connection check: PARTIAL (200ms) for https://x.com
+[2025-07-31 13:41:37] WARN: ⚠️ Proxy connection unavailable: null. Service will still start but proxy functionality may be limited.
+[2025-07-31 13:41:37] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 13:43:57] INFO: SIGINT received, cleaning up...
+[2025-07-31 13:50:42] INFO: ✅ Server running on port 3000
+[2025-07-31 13:50:42] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 13:50:42] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 14:30:20] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:30:20] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:30:20] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:30:20] INFO: Health check requested
+[2025-07-31 14:30:20] WARN: Error checking session status: getStoredAuthToken is not a function
+[2025-07-31 14:30:20] INFO: Checking proxy connection
+[2025-07-31 14:30:20] INFO: Testing proxy connection to gw.dataimpulse.com:10000
+[2025-07-31 14:30:20] ERROR: Proxy connection test failed: HttpsProxyAgent is not a constructor
+[2025-07-31 14:30:20] INFO: Health check completed successfully: {"uptime":"40 minutes","memory_usage":"60.82 MB","session_status":"not logged in","proxy_status":"disconnected"}
+[2025-07-31 14:31:12] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:31:12] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:31:12] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:31:12] INFO: Logs retrieval requested
+[2025-07-31 14:36:22] WARN: Authentication failed: Invalid token provided - IP: ::1
+[2025-07-31 14:36:31] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:36:31] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:36:31] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:36:31] INFO: Health check requested
+[2025-07-31 14:36:31] WARN: Error checking session status: getStoredAuthToken is not a function
+[2025-07-31 14:36:31] INFO: Checking proxy connection
+[2025-07-31 14:36:31] INFO: Testing proxy connection to gw.dataimpulse.com:10000
+[2025-07-31 14:36:31] ERROR: Proxy connection test failed: HttpsProxyAgent is not a constructor
+[2025-07-31 14:36:31] INFO: Health check completed successfully: {"uptime":"about 1 hour","memory_usage":"62.62 MB","session_status":"not logged in","proxy_status":"disconnected"}
+[2025-07-31 14:36:46] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:36:46] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:36:46] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:36:46] INFO: Health check requested
+[2025-07-31 14:36:46] WARN: Error checking session status: getStoredAuthToken is not a function
+[2025-07-31 14:36:46] INFO: Checking proxy connection
+[2025-07-31 14:36:46] INFO: Testing proxy connection to gw.dataimpulse.com:10000
+[2025-07-31 14:36:46] ERROR: Proxy connection test failed: HttpsProxyAgent is not a constructor
+[2025-07-31 14:36:46] INFO: Health check completed successfully: {"uptime":"about 1 hour","memory_usage":"62.84 MB","session_status":"not logged in","proxy_status":"disconnected"}
+[2025-07-31 14:37:03] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:37:03] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:37:03] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:37:03] INFO: Logs retrieval requested
+[2025-07-31 14:37:11] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:37:11] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:37:11] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:37:11] INFO: Logs retrieval requested
+[2025-07-31 14:37:19] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:37:19] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:37:19] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:37:19] INFO: Screenshots retrieval requested
+[2025-07-31 14:37:19] INFO: Screenshots retrieved successfully: 9 files found
+[2025-07-31 14:37:29] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:37:29] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:37:29] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:37:29] INFO: Screenshots retrieval requested
+[2025-07-31 14:37:29] INFO: Screenshots retrieved successfully: 9 files found
+[2025-07-31 14:50:18] INFO: SIGINT received, cleaning up...
+[2025-07-31 14:50:21] INFO: ✅ Server running on port 3000
+[2025-07-31 14:50:21] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 14:50:21] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 14:50:46] WARN: Authentication failed: Invalid token provided - IP: ::1
+[2025-07-31 14:51:09] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:51:09] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:51:09] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:51:09] INFO: Health check requested
+[2025-07-31 14:51:09] WARN: Error checking session status: getStoredAuthToken is not a function
+[2025-07-31 14:51:09] INFO: Checking proxy connection
+[2025-07-31 14:51:09] INFO: Testing proxy connection to gw.dataimpulse.com:10000
+[2025-07-31 14:51:09] ERROR: Proxy connection test failed: HttpsProxyAgent is not a constructor
+[2025-07-31 14:51:09] INFO: Health check completed successfully: {"uptime":"1 minute","memory_usage":"60.45 MB","session_status":"not logged in","proxy_status":"disconnected"}
+[2025-07-31 14:52:45] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:52:45] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:52:45] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:52:45] INFO: Logs retrieval requested
+[2025-07-31 14:52:45] INFO: Logs retrieved successfully: 97 entries found
+[2025-07-31 14:53:00] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:53:00] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:53:00] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:53:00] INFO: Screenshots retrieval requested
+[2025-07-31 14:53:00] INFO: Screenshots retrieved successfully: 9 files found
+[2025-07-31 14:53:06] INFO: Authentication successful - IP: ::1
+[2025-07-31 14:53:06] INFO: Starting auth token retrieval process
+[2025-07-31 14:53:06] INFO: Launching browser for auth token retrieval
+[2025-07-31 14:53:06] INFO: Opening X login page, waiting for manual login
+[2025-07-31 14:53:13] INFO: Waiting for auth_token cookie...
+[2025-07-31 14:54:13] INFO: Still waiting for login... 9 minutes remaining
+[2025-07-31 14:55:13] INFO: Still waiting for login... 8 minutes remaining
+[2025-07-31 14:56:13] INFO: Still waiting for login... 7 minutes remaining
+[2025-07-31 14:57:13] INFO: Still waiting for login... 6 minutes remaining
+[2025-07-31 14:58:14] INFO: Still waiting for login... 5 minutes remaining
+[2025-07-31 14:59:14] INFO: Still waiting for login... 4 minutes remaining
+[2025-07-31 15:00:04] INFO: Auth token retrieved successfully
+[2025-07-31 15:00:04] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\auth_token_retrieval_2025-07-31T14-00-04-215Z.png
+[2025-07-31 15:00:04] INFO: Auth token saved successfully to C:\Users\nihed\Desktop\HechTask\data\auth_token.txt
+[2025-07-31 15:00:12] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:00:12] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:00:12] ERROR: Validation errors: [{"type":"field","value":"","msg":"Guest ID is required","path":"guest_id","location":"body"}]
+[2025-07-31 15:01:06] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:01:06] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:01:06] ERROR: Validation errors: [{"type":"field","value":"","msg":"Guest ID is required","path":"guest_id","location":"body"}]
+[2025-07-31 15:01:14] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:01:14] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:01:14] INFO: Received direct post request: "Testing the X-Posts Bot Direct..."
+[2025-07-31 15:01:14] INFO: Creating direct post with content: Testing the X-Posts Bot Direct API! This is an automated post using GraphQL. #automation #testing 2025-07-31T14_01_14_722Z
+[2025-07-31 15:01:14] ERROR: Exception in Go-style direct post: getAuthToken is not defined
+[2025-07-31 15:01:14] ERROR: Error creating direct post: getAuthToken is not defined
+[2025-07-31 15:02:31] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:02:31] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:02:31] INFO: Received direct post request: "Testing the X-Posts Bot Direct..."
+[2025-07-31 15:02:31] INFO: Creating direct post with content: Testing the X-Posts Bot Direct API! This is an automated post using GraphQL. #automation #testing 2025-07-31T14_02_31_940Z
+[2025-07-31 15:02:31] ERROR: Exception in Go-style direct post: getAuthToken is not defined
+[2025-07-31 15:02:31] ERROR: Error creating direct post: getAuthToken is not defined
+[2025-07-31 15:03:37] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:03:37] INFO: Received post request: "Testing the X-Posts Bot Puppet..."
+[2025-07-31 15:03:37] INFO: Creating new post on X
+[2025-07-31 15:03:37] INFO: Ensured required directories exist
+[2025-07-31 15:03:37] INFO: No active session, creating new one
+[2025-07-31 15:03:37] INFO: Configured proxy using host/port: gw.dataimpulse.com:10000
+[2025-07-31 15:03:37] INFO: Browser initialized successfully
+[2025-07-31 15:03:38] INFO: Proxy authentication applied successfully
+[2025-07-31 15:03:38] INFO: Configured proxy using host/port: gw.dataimpulse.com:10000
+[2025-07-31 15:03:38] INFO: Proxy authentication applied successfully
+[2025-07-31 15:03:38] INFO: Browser initialized successfully
+[2025-07-31 15:03:38] INFO: Restored cookies from storage
+[2025-07-31 15:03:38] ERROR: Session validation failed: net::ERR_INVALID_AUTH_CREDENTIALS at https://x.com/home
+[2025-07-31 15:03:38] ERROR: Failed to take screenshot: Protocol error (Page.bringToFront): Not attached to an active page
+[2025-07-31 15:03:38] ERROR: Error creating post: Session validation failed: net::ERR_INVALID_AUTH_CREDENTIALS at https://x.com/home
+[2025-07-31 15:03:38] ERROR: Failed to take screenshot: Protocol error (Page.bringToFront): Not attached to an active page
+[2025-07-31 15:03:38] ERROR: Error creating post: Failed to create post: Session validation failed: net::ERR_INVALID_AUTH_CREDENTIALS at https://x.com/home
+[2025-07-31 15:05:22] INFO: SIGINT received, cleaning up...
+[2025-07-31 15:05:24] INFO: ✅ Server running on port 3000
+[2025-07-31 15:05:24] INFO: 🔐 API Authentication: Bearer Token
+[2025-07-31 15:05:24] INFO: 🤖 X Posts Bot service is ready
+[2025-07-31 15:05:29] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:05:29] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:05:30] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:05:30] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:05:41] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:05:41] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:05:41] INFO: Received direct post request: "Testing the X-Posts Bot Direct..."
+[2025-07-31 15:05:41] INFO: Creating direct post with content: Testing the X-Posts Bot Direct API! This is an automated post using GraphQL. #automation #testing 2025-07-31T14_05_41_911Z
+[2025-07-31 15:05:41] INFO: Auth token retrieved, length: 40
+[2025-07-31 15:05:41] INFO: Starting Go-style CT0 cookie retrieval process
+[2025-07-31 15:05:42] INFO: Navigating to x.com
+[2025-07-31 15:05:50] INFO: Injecting auth_token cookie
+[2025-07-31 15:05:50] INFO: Reloading page to apply cookie
+[2025-07-31 15:06:00] INFO: Retrieving all cookies
+[2025-07-31 15:06:00] INFO: Looking for ct0 cookie
+[2025-07-31 15:06:00] INFO: Successfully retrieved ct0 cookie: ea7034d2471f69523c2084b9e76eabdd5a5bad21bae0b6b8e55fac789e6d1c4c9ce99109e16f69a9806f484050ff8d515da62632f671c6a4346333b786f7d5116a1d44d582f39c0d80a9ae03f466daa1
+[2025-07-31 15:06:00] INFO: CT0 cookie retrieved: ea7034d2471f69523c2084b9e76eabdd5a5bad21bae0b6b8e55fac789e6d1c4c9ce99109e16f69a9806f484050ff8d515da62632f671c6a4346333b786f7d5116a1d44d582f39c0d80a9ae03f466daa1
+[2025-07-31 15:06:00] DEBUG: Generated XPFF header successfully
+[2025-07-31 15:06:00] INFO: XPFF header generated for guestID: v1%3A175379720523324276
+[2025-07-31 15:06:00] INFO: === GO-STYLE REQUEST DETAILS ===
+[2025-07-31 15:06:00] INFO: Cookie: auth_token=2c70cae8c77a32593adb38a3ef0ed88dce2138a2; ct0=ea7034d2471f69523c2084b9e76eabdd5a5bad21bae0b6b8e55fac789e6d1c4c9ce99109e16f69a9806f484050ff8d515da62632f671c6a4346333b786f7d5116a1d44d582f39c0d80a9ae03f466daa1
+[2025-07-31 15:06:00] INFO: X-Csrf-Token: ea7034d2471f69523c2084b9e76eabdd5a5bad21bae0b6b8e55fac789e6d1c4c9ce99109e16f69a9806f484050ff8d515da62632f671c6a4346333b786f7d5116a1d44d582f39c0d80a9ae03f466daa1
+[2025-07-31 15:06:00] INFO: Content-Length: 1929
+[2025-07-31 15:06:00] INFO: X-Xp-Forwarded-For: 85abf299d82c34fb2df1a232251354ee4464b2fd563ab89d17c6a90b155f100dff1c685b407f7f6d977741b40617904e7f12715d799bb3deb5a0ff5d06e97b678eb2dadf3102538b91e35671b6e316cb551bc423e9493145db443ba5b851e82bec489c6d457a325200d525a3c94d5556c14e3be81cc7337f6c1b8675d28a5f0f6af1b77cb2d443780de3b677678c670d7ead6173b599afa77f1c40f7509a5494fe1ab8162df03e84888a5eaba9373825377cfac7fc5a30325349f38e16427022dfe0a8c1660e562ee3830ac1bf96a2285fad5731dc9fefa37a31032c4a6e090dcf4bb623438a1586c5557ff075ebee80e59677398d38eae6cf79
+[2025-07-31 15:06:00] INFO: =================================
+[2025-07-31 15:06:01] INFO: Response Status: 200
+[2025-07-31 15:06:01] INFO: Full response data:
+[2025-07-31 15:06:01] INFO: {
+  "data": {
+    "create_tweet": {
+      "tweet_results": {
+        "result": {
+          "rest_id": "1950920888028725367",
+          "core": {
+            "user_results": {
+              "result": {
+                "__typename": "User",
+                "id": "VXNlcjoxODkzODMwMDQyNTkwODcxNTUz",
+                "rest_id": "1893830042590871553",
+                "affiliates_highlighted_label": {},
+                "avatar": {
+                  "image_url": "https://pbs.twimg.com/profile_images/1893830146316181504/8yKOSmqe_normal.jpg"
+                },
+                "core": {
+                  "created_at": "Mon Feb 24 01:07:46 +0000 2025",
+                  "name": "nihed abdennour",
+                  "screen_name": "CrackxTn07"
+                },
+                "dm_permissions": {
+                  "can_dm": true
+                },
+                "has_graduated_access": false,
+                "is_blue_verified": false,
+                "legacy": {
+                  "default_profile": true,
+                  "default_profile_image": false,
+                  "description": "",
+                  "entities": {
+                    "description": {
+                      "urls": []
+                    }
+                  },
+                  "fast_followers_count": 0,
+                  "favourites_count": 0,
+                  "followers_count": 0,
+                  "friends_count": 3,
+                  "has_custom_timelines": false,
+                  "is_translator": false,
+                  "listed_count": 0,
+                  "media_count": 0,
+                  "needs_phone_verification": false,
+                  "normal_followers_count": 0,
+                  "pinned_tweet_ids_str": [],
+                  "possibly_sensitive": false,
+                  "profile_interstitial_type": "",
+                  "statuses_count": 37,
+                  "translator_type": "none",
+                  "want_retweets": false,
+                  "withheld_in_countries": []
+                },
+                "location": {
+                  "location": ""
+                },
+                "media_permissions": {
+                  "can_media_tag": true
+                },
+                "parody_commentary_fan_label": "None",
+                "profile_image_shape": "Circle",
+                "privacy": {
+                  "protected": false
+                },
+                "relationship_perspectives": {
+                  "following": false
+                },
+                "tipjar_settings": {},
+                "verification": {
+                  "verified": false
+                }
+              }
+            }
+          },
+          "unmention_data": {},
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1950920888028725367"
+            ],
+            "editable_until_msecs": "1753974360000",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "is_translatable": false,
+          "views": {
+            "state": "Enabled"
+          },
+          "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+          "grok_analysis_button": true,
+          "legacy": {
+            "bookmark_count": 0,
+            "bookmarked": false,
+            "created_at": "Thu Jul 31 14:06:00 +0000 2025",
+            "conversation_id_str": "1950920888028725367",
+            "display_text_range": [
+              0,
+              122
+            ],
+            "entities": {
+              "hashtags": [
+                {
+                  "indices": [
+                    77,
+                    88
+                  ],
+                  "text": "automation"
+                },
+                {
+                  "indices": [
+                    89,
+                    97
+                  ],
+                  "text": "testing"
+                }
+              ],
+              "symbols": [],
+              "timestamps": [],
+              "urls": [],
+              "user_mentions": []
+            },
+            "favorite_count": 0,
+            "favorited": false,
+            "full_text": "Testing the X-Posts Bot Direct API! This is an automated post using GraphQL. #automation #testing 2025-07-31T14_05_41_911Z",
+            "is_quote_status": false,
+            "lang": "en",
+            "quote_count": 0,
+            "reply_count": 0,
+            "retweet_count": 0,
+            "retweeted": false,
+            "user_id_str": "1893830042590871553",
+            "id_str": "1950920888028725367"
+          },
+          "unmention_info": {}
+        }
+      }
+    }
+  }
+}
+[2025-07-31 15:06:01] INFO: Post successful, tweet ID: 1950920888028725367
+[2025-07-31 15:06:08] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:06:08] INFO: Ensured required directories exist
+[2025-07-31 15:06:09] INFO: Browser initialized successfully
+[2025-07-31 15:06:09] INFO: Restored cookies from storage
+[2025-07-31 15:06:18] INFO: Screenshot saved: C:\Users\nihed\Desktop\HechTask\screenshots\session_status_2025-07-31T14-06-17-506Z.png
+[2025-07-31 15:06:24] WARN: Browser disconnected
+[2025-07-31 15:06:51] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:06:51] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:07:15] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:07:15] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:07:29] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:07:29] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:07:29] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:07:29] INFO: Starting CT0 cookie retrieval
+[2025-07-31 15:07:29] ERROR: CT0 cookie retrieval failed: getStoredAuthToken is not a function
+[2025-07-31 15:07:29] ERROR: Error: getStoredAuthToken is not a function
+[2025-07-31 15:07:29] ERROR: TypeError: getStoredAuthToken is not a function
+    at C:\Users\nihed\Desktop\HechTask\routes\apiRoutes.js:265:29
+    at Layer.handle [as handle_request] (C:\Users\nihed\Desktop\HechTask\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\nihed\Desktop\HechTask\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\nihed\Desktop\HechTask\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\nihed\Desktop\HechTask\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\nihed\Desktop\HechTask\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\nihed\Desktop\HechTask\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\nihed\Desktop\HechTask\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\nihed\Desktop\HechTask\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\nihed\Desktop\HechTask\node_modules\express\lib\router\index.js:47:12)
+[2025-07-31 15:07:50] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:07:50] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:07:50] INFO: Authentication successful - IP: ::1
+[2025-07-31 15:07:50] INFO: Starting bearer token retrieval
+[2025-07-31 15:07:50] INFO: Found main.js URL using pattern: /src="(https:\/\/abs\.twimg\.com\/responsive-web\/client-web\/main\.[a-z0-9]+\.js)"/
+[2025-07-31 15:07:50] INFO: Found main.js URL: https://abs.twimg.com/responsive-web/client-web/main.0fe9ecba.js
+[2025-07-31 15:07:51] INFO: Searching for bearer token in main.js
+[2025-07-31 15:07:51] DEBUG: JS content sample: window.__SCRIPTS_LOADED__.vendor&&((self.webpackChunk_twitter_responsive_web=self.webpackChunk_twitter_responsive_web||[]).push([["main"],{126738:(e,a,d)=>{var o=d(292426);o.loadLanguage.registerChunkLoader((function(e){return d(831893)(`./${e}`)}),["en","ar","ar-x-fm","bg","bn","ca","cs","da","de","el","en-GB","en-ss","en-xx","es","eu","fa","fi","fil","fr","ga","gl","gu","ha","he","hi","hr","hu","id","ig","it","ja","kn","ko","mr","ms","nb","nl","pl","pt","ro","ru","sk","sr","sv","ta","th","tr","uk","ur","vi","yo","zh","zh-Hant"]),e.exports=o},831893:(e,a,d)=>{var o={"./ar":[240421,"vendor-38c57b44","vendor-49d0a293","vendor-48a4958c","vendor-3dfac8a4","vendor-cb2d071c","vendor-91c40cd8","vendor-adcb47af","vendor-7940b00b","vendor-669c86db","vendor-3e5eb623","vendor-aaaf2b0c","vendor-c4d1d074","vendor-63e37921","vendor-de539588","vendor-ccf8c62e","vendor-eb8eaa08","vendor-6b20cc7c","vendor-821262ff","vendor-85aa29ea","vendor-e5bca7e4","vendor-49ceb22a","vendor-bfc04956","vendor-e395fec...
+[2025-07-31 15:07:51] INFO: Found bearer token using pattern: /"([a-zA-Z0-9%]{100,})"/
+[2025-07-31 15:07:51] INFO: Using capturing group bearer token match
+[2025-07-31 15:07:51] INFO: Bearer token extracted successfully
+[2025-07-31 15:15:25] INFO: SIGINT received, cleaning up...

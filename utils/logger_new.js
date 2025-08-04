@@ -18,6 +18,7 @@ if (!fs.existsSync(screenshotsDir)) {
   fs.mkdirSync(screenshotsDir, { recursive: true });
 }
 
+// Create dynamic filename based on the current date
 const getLogFileName = () => {
   const date = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
   return path.join(logDir, `app-${date}.log`);
@@ -48,31 +49,36 @@ const logger = winston.createLogger({
   ]
 });
 
-// Always add console transport
-logger.add(new winston.transports.Console({
-  format: winston.format.combine(
-    winston.format.colorize(),
-    winston.format.timestamp({
-      format: 'YYYY-MM-DD HH:mm:ss'
-    }),
-    winston.format.printf(({ timestamp, level, message, stack, ...metadata }) => {
-      let requestId = metadata.requestId ? `[${metadata.requestId}] ` : '';
-      let metadataStr = '';
-      if (Object.keys(metadata).length > 0) {
-        // Filter out large objects for console display
-        const displayMeta = { ...metadata };
-        delete displayMeta.service; // Don't need to show service name in every log
-        if (Object.keys(displayMeta).length > 0) {
-          metadataStr = `\n${JSON.stringify(displayMeta, null, 2)}`;
+// Add console transport in development mode
+if (process.env.NODE_ENV !== 'production') {
+  logger.add(new winston.transports.Console({
+    format: winston.format.combine(
+      winston.format.colorize(),
+      winston.format.timestamp({
+        format: 'YYYY-MM-DD HH:mm:ss'
+      }),
+      winston.format.printf(({ timestamp, level, message, stack, ...metadata }) => {
+        let requestId = metadata.requestId ? `[${metadata.requestId}] ` : '';
+        let metadataStr = '';
+        
+        if (Object.keys(metadata).length > 0) {
+          // Filter out large objects for console display
+          const displayMeta = { ...metadata };
+          delete displayMeta.service; // Don't need to show service name in every log
+          
+          if (Object.keys(displayMeta).length > 0) {
+            metadataStr = `\n${JSON.stringify(displayMeta, null, 2)}`;
+          }
         }
-      }
-      if (stack) {
-        return `[${timestamp}] ${level}: ${requestId}${message}\n${stack}${metadataStr}`;
-      }
-      return `[${timestamp}] ${level}: ${requestId}${message}${metadataStr}`;
-    })
-  )
-}));
+        
+        if (stack) {
+          return `[${timestamp}] ${level}: ${requestId}${message}\n${stack}${metadataStr}`;
+        }
+        return `[${timestamp}] ${level}: ${requestId}${message}${metadataStr}`;
+      })
+    )
+  }));
+}
 
 // Helper function to capture screenshots on errors
 logger.captureErrorScreenshot = async (page, errorMessage) => {
